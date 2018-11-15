@@ -17,10 +17,10 @@
         daemonize yes
         logfile "6380.log"
         dbfilename "db-6380.rdb"
-        slaveof 127.0.0.1 6379
+        slaveof 192.168.5.128 6379
         ```
         可以看到只需要一行配置就ok
-        > slaveof 127.0.0.1 6379
+        > slaveof 192.168.5.128 6379
 
         其他的类似
     - server-6381.conf
@@ -30,7 +30,7 @@
         daemonize yes
         logfile "6381.log"
         dbfilename "db-6381.rdb"
-        slaveof 127.0.0.1 6379
+        slaveof 192.168.5.128 6379
         ```
     - server-6382.conf
         ```bash
@@ -39,7 +39,7 @@
         daemonize yes
         logfile "6382.log"
         dbfilename "db-6382.rdb"
-        slaveof 127.0.0.1 6379
+        slaveof 192.168.5.128 6379
         ```
 3. 启动
     server正常启动就好
@@ -54,5 +54,7 @@
 4. 原理
 
    TODO 这个以后有时间再写，现在没研究到Redis这里
-    推荐Redis开发与运维这本书，受益匪浅
+
+   推荐Redis开发与运维这本书，受益匪浅
+
 **ps:推一下以后更新的篇目，SpringMVC源码篇，近期更新[连接]()**
