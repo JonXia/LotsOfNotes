@@ -52,3 +52,20 @@ overcommit_memory参数说明：
   点数越高，这个进程越有可能被杀死。
   每个进程的点数跟oom_score_adj有关，而且oom_score_adj可以被设置(-1000最低，1000最高)。
 
+3. redis中的incr实行自增
+
+   incr是从0开始，如果你需要从1开始，需要多加一次。
+   [用RedisAtomicLong处理访问量等实时性要求高的需求](https://blog.csdn.net/qq_35264464/article/details/79490664)
+
+4. Redis的sentinel不能布在marster上...这个一定要小心
+    另起一台虚拟机就好，我用一主二从三哨兵，一台marster布3哨兵就行
+
+5. 使用pipline提升效率
+
+    这个博客讲的不错[链接](https://blog.csdn.net/babylove_BaLe/article/details/76258904)
+
+6.  但是pipline中不能用scan操作
+
+    而且：对于 SCAN 这类增量式迭代命令来说， 因为在对键进行增量式迭代的过程中， 键可能会被修改， 所以增量式迭代命令只能对被返回的元素提供有限的保证 （offer limited guarantees about the returned elements）。
+
+    所以对于key的设计与存储使用方面要注意，不能经常修改.
