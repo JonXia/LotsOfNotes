@@ -1,3 +1,4 @@
+# Nginx配置
 ## 1.背景
 需要实现80端口到项目端口的转发
 ## 2.正文
@@ -7,7 +8,7 @@
     ```
     查看依赖
     ```bash
-    yum deplist nginx^
+    yum deplist nginx
     ```
     ```bash
     [root@VM_0_11_centos ~]# yum deplist nginx
@@ -68,93 +69,91 @@
 - vim /etc/nginx/nginx.conf修改配置文件
 - nginx -t 验证配置文件
 - service nginx start/systemctl start nginx 启动
--
+
 - 配置文件备份
-```conf
 
-# For more information on configuration, see:
-#   * Official English Documentation: http://nginx.org/en/docs/
-#   * Official Russian Documentation: http://nginx.org/ru/docs/
+		# For more information on configuration, see:
+		#   * Official English Documentation: http://nginx.org/en/docs/
+		#   * Official Russian Documentation: http://nginx.org/ru/docs/
 
-user nginx;
-worker_processes auto;
-error_log /var/log/nginx/error.log;
-pid /run/nginx.pid;
+		user nginx;
+		worker_processes auto;
+		error_log /var/log/nginx/error.log;
+		pid /run/nginx.pid;
 
-# Load dynamic modules. See /usr/share/nginx/README.dynamic.
-include /usr/share/nginx/modules/*.conf;
+		# Load dynamic modules. See /usr/share/nginx/README.dynamic.
+		include /usr/share/nginx/modules/*.conf;
 
-events {
-    worker_connections 1024;
-}
+		events {
+			worker_connections 1024;
+		}
 
-http {
-    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                      '$status $body_bytes_sent "$http_referer" '
-                      '"$http_user_agent" "$http_x_forwarded_for"';
+		http {
+			log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+							  '$status $body_bytes_sent "$http_referer" '
+							  '"$http_user_agent" "$http_x_forwarded_for"';
 
-    access_log  /var/log/nginx/access.log  main;
+			access_log  /var/log/nginx/access.log  main;
 
-    sendfile            on;
-    tcp_nopush          on;
-    tcp_nodelay         on;
-    keepalive_timeout   65;
-    types_hash_max_size 2048;
+			sendfile            on;
+			tcp_nopush          on;
+			tcp_nodelay         on;
+			keepalive_timeout   65;
+			types_hash_max_size 2048;
 
-    include             /etc/nginx/mime.types;
-    default_type        application/octet-stream;
+			include             /etc/nginx/mime.types;
+			default_type        application/octet-stream;
 
-    # Load modular configuration files from the /etc/nginx/conf.d directory.
-    # See http://nginx.org/en/docs/ngx_core_module.html#include
-    # for more information.
-    include /etc/nginx/conf.d/*.conf;
-        #MyConf-start
-    server {
-    listen 80;
-    server_name makeprogress.xyz;
-    #access_log /data/wwwlogs/api.51carry.com_nginx.log combined;
+			# Load modular configuration files from the /etc/nginx/conf.d directory.
+			# See http://nginx.org/en/docs/ngx_core_module.html#include
+			# for more information.
+			include /etc/nginx/conf.d/*.conf;
+				#MyConf-start
+			server {
+			listen 80;
+			server_name makeprogress.xyz;
+			#access_log /data/wwwlogs/api.51carry.com_nginx.log combined;
 
-    location / {
-        proxy_pass http://127.0.0.1:8083;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header X-Forwarded-Port $server_port;
-        }
-    }
-    #MyConf-end
+			location / {
+				proxy_pass http://127.0.0.1:8083;
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+				proxy_set_header X-Forwarded-Proto $scheme;
+				proxy_set_header X-Forwarded-Port $server_port;
+				}
+			}
+			#MyConf-end
 
 
-# Settings for a TLS enabled server.
-#
-#    server {
-#        listen       443 ssl http2 default_server;
-#        listen       [::]:443 ssl http2 default_server;
-#        server_name  _;
-#        root         /usr/share/nginx/html;
-#
-#        ssl_certificate "/etc/pki/nginx/server.crt";
-#        ssl_certificate_key "/etc/pki/nginx/private/server.key";
-#        ssl_session_cache shared:SSL:1m;
-#        ssl_session_timeout  10m;
-#        ssl_ciphers HIGH:!aNULL:!MD5;
-#        ssl_prefer_server_ciphers on;
-#
-#        # Load configuration files for the default server block.
-#        include /etc/nginx/default.d/*.conf;
-#
-#        location / {
-#        }
-#
-#        error_page 404 /404.html;
-#            location = /40x.html {
-#        }
-#
-#        error_page 500 502 503 504 /50x.html;
-#            location = /50x.html {
-#        }
-#    }
+		# Settings for a TLS enabled server.
+		#
+		#    server {
+		#        listen       443 ssl http2 default_server;
+		#        listen       [::]:443 ssl http2 default_server;
+		#        server_name  _;
+		#        root         /usr/share/nginx/html;
+		#
+		#        ssl_certificate "/etc/pki/nginx/server.crt";
+		#        ssl_certificate_key "/etc/pki/nginx/private/server.key";
+		#        ssl_session_cache shared:SSL:1m;
+		#        ssl_session_timeout  10m;
+		#        ssl_ciphers HIGH:!aNULL:!MD5;
+		#        ssl_prefer_server_ciphers on;
+		#
+		#        # Load configuration files for the default server block.
+		#        include /etc/nginx/default.d/*.conf;
+		#
+		#        location / {
+		#        }
+		#
+		#        error_page 404 /404.html;
+		#            location = /40x.html {
+		#        }
+		#
+		#        error_page 500 502 503 504 /50x.html;
+		#            location = /50x.html {
+		#        }
+		#    }
 
-}
-```
+		}
+		```
 
-#### 推一波自己的网站[Makeprogress.xyz](makeprogress.xyz)，里面的博文由4只猿共同更新，包含的东西比较广，包括大数据、Java后台、前端等，内容目前比较初级，欢迎来访和交流~
