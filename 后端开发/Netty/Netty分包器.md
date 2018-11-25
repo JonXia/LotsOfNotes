@@ -38,7 +38,7 @@
 
     但是为什么拆包器在pipline的最前面？
 
-    <img src="../pics/packspilter.png" height="500" weigth="200"/>
+    <img src="../pics/packspilterleitu.png" height="500" weigth="200"/>
 
     由此可见，分割器 PackageSpliter 继承了ChannelInboundHandlerAdapter。
       本质上，它是一个入站处理器。
