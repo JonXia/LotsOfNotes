@@ -14,8 +14,7 @@
         设置长度信息（长度域）在数据包中的位置。
         设置长度信息（长度域）自身的长度，也就是占用的字节数。
     ```java
-    public class PackageSpliter extends LengthFieldBasedFrameDecoder
-    {
+    public class PackageSpliter extends LengthFieldBasedFrameDecoder{
 
         public PackageSpliter() {
             super(Integer.MAX_VALUE, 1,1);
