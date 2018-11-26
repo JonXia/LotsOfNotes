@@ -63,8 +63,18 @@ overcommit_memory参数说明：
 5. 使用pipline提升效率
 
     这个博客讲的不错[链接](https://blog.csdn.net/babylove_BaLe/article/details/76258904)
+    ```java
+    Jedis jedis = new Jedis("127.0.0.1");
+    Pipeline pipeline = jedis.pipelined();
+    pipeline.set("hello", "world");
+    pipeline.incr("counter");
+    List<Object> resultList = pipeline.syncAndReturnAll();
+    for (Object object : resultList) {
+        System.out.println(object);
+    }
+    ```
 
-6.  但是pipline中不能用scan操作
+6.  但是192.168.5.127中不能用scan操作
 
     而且：对于 SCAN 这类增量式迭代命令来说， 因为在对键进行增量式迭代的过程中， 键可能会被修改， 所以增量式迭代命令只能对被返回的元素提供有限的保证 （offer limited guarantees about the returned elements）。
 
