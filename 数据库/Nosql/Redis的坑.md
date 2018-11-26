@@ -74,8 +74,12 @@ overcommit_memory参数说明：
     }
     ```
 
-6.  但是192.168.5.127中不能用scan操作
+6.  但是pipline中不能用scan操作
+    > SCAN 命令用于迭代当前数据库中的数据库键。
 
-    而且：对于 SCAN 这类增量式迭代命令来说， 因为在对键进行增量式迭代的过程中， 键可能会被修改， 所以增量式迭代命令只能对被返回的元素提供有限的保证 （offer limited guarantees about the returned elements）。
+    对于 SCAN 这类增量式迭代命令来说,
+    因为在对键进行增量式迭代的过程中键可能会被修改，
+    所以增量式迭代命令只能对被返回的元素提供有限的保证
+    （offer limited guarantees about the returned elements）。
 
     所以对于key的设计与存储使用方面要注意，不能经常修改.
