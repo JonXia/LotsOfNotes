@@ -74,7 +74,7 @@ overcommit_memory参数说明：
     }
     ```
 
-6.  但是pipline中不能用scan操作
+     但是pipline中不能用scan操作
     > SCAN 命令用于迭代当前数据库中的数据库键。
 
     对于 SCAN 这类增量式迭代命令来说,
