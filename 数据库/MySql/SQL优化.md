@@ -28,8 +28,11 @@
           ```
             这样不带任何条件的count会引起全表扫描
 
-        -
+    - distinct [为了防止视图合并..](https://blog.csdn.net/ren6370/article/details/73732537)
 
+    - force index(index_name) 可以强制使用索引
+
+    - where ... group by ... having ...这里的条件过滤一定要注意，假如条件过滤设置的比较复杂，那么在同等级的查询条件一定要把能过滤掉比较多的条件放在where后面，group by having再进行进一步过滤
 
     - 大表相关
         - 对于多张大数据量的表JOIN，要先分页再JOIN，否则逻辑读会很高，性能很差。
@@ -44,6 +47,7 @@
 
 2. 工具
     - profilling
-        ![profilling看这篇](https://blog.csdn.net/u011277123/article/details/53316206)
-        ![和这篇](https://www.cnblogs.com/timlearn/p/4052523.html)
-        ![输出SQL索引优化建议工具SQLAdvisor](https://blog.csdn.net/qq_14997169/article/details/76054081)
+        [profilling看这篇](https://blog.csdn.net/u011277123/article/details/53316206)
+        [和这篇](https://www.cnblogs.com/timlearn/p/4052523.html)
+
+        [输出SQL索引优化建议工具SQLAdvisor](https://blog.csdn.net/qq_14997169/article/details/76054081)
