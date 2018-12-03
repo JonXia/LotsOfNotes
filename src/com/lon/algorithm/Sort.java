@@ -51,12 +51,11 @@ public class Sort {
         int temp, min = 0;
         // 比较的次数
         for (int i = 0; i < arr.length-1; i++) {
-
             //找到最小数的下标
             for (int j = i+1; j < arr.length; j++) {
                 if (arr[min] > arr[j]) {
                     min=j;
-
+                    
                 }
             }// loop j
             //与最前面的做交换
@@ -64,5 +63,7 @@ public class Sort {
 
         }// loop i
     }
+
+
 }
 

@@ -70,7 +70,7 @@
         [profilling看这篇](https://blog.csdn.net/u011277123/article/details/53316206)
         [和这篇](https://www.cnblogs.com/timlearn/p/4052523.html)
 
-        [输出SQL索引优化建议工具SQLAdvisor](https://blog.csdn.net/qq_14997169/article/details/76054081)
+        [SQL索引优化建议工具SQLAdvisor](https://blog.csdn.net/qq_14997169/article/details/76054081)
 
 3. 文章
     - [SQL优化](http://lib.csdn.net/article/mysql/5037)
