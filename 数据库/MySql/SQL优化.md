@@ -44,7 +44,27 @@
             where a.id=b.id;
             #定位id段，再进行连接查询
             ```
+    - InnoDB参数
+        - innodb_buffer_size:
+            数据块和索引块的缓存大小
+        - innodb_io_capacity：
+            这个参数刷新脏页数量和合并插入数量，改善磁盘IO处理能力
 
+        - max_connections
+
+        - back_log
+            MySQL能暂存的连接数量(根据实际设置)这两个负责在连接高的情况下调优，
+
+        - key_buffer_size=1024M(myisam)
+            key_buffer_size指定索引缓冲区的大小，它决定索引处理的速度，尤其是索引读的速度。通过检查状态值 Key_read_requests和Key_reads，可以知道key_buffer_size设置是否合理。比例key_reads / key_read_requests应该尽可能的低，至少是1:100，1:1000更好（上述状态值可以使用SHOW STATUS LIKE ‘key_read%’获得）。
+
+        - query_cache_size=128M
+            内部内存临时表的最大值,每个线程都要分配
+        - join_buffer_size=1024M
+            联合查询操作所能使用的缓冲区大小
+        - record_buffer_size
+            每个进行一个顺序扫描的线程为其扫描的每张表分配这个大小的一个缓冲区。如果你做很多顺序扫描，你可能想要增加该值。
+            默认数值是131072(128K)，可改为16773120 (16M)
 2. 工具
     - profilling
         [profilling看这篇](https://blog.csdn.net/u011277123/article/details/53316206)
