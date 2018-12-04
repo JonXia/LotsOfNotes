@@ -16,8 +16,29 @@ package com.lon.leetcode.array;
  * @create: 2018-12-04 22:27
  */
 public class MoveZeros {
-    public static void main(String[] args) {
-        int []input=new int[]{0,1,0,3,12};
 
+    public static void main(String[] args) {
+        int [] x=new int[]{0,1,0,3,12};
+        moveZeroes(x);
+        for (int i = 0; i < x.length; i++) {
+            System.out.print(x[i]+" ");
+        }
+
+    }
+    public static void moveZeroes(int[] nums) {
+        if(nums == null || nums.length == 0){
+            return;
+        }
+        //记录非o元素开始位置
+        int k = 0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i] != 0) {
+                nums[k++] = nums[i];
+            }
+        }
+        while(k < nums.length) {
+            nums[k] = 0;
+            k++;
+        }
     }
 }
