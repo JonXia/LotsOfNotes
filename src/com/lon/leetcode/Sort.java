@@ -1,4 +1,4 @@
-package com.lon.algorithm;
+package com.lon.leetcode;
 
 /**
  * @program: jweb
