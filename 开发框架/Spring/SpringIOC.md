@@ -50,3 +50,14 @@ public void setApples(Set<Apple> apples){
 
 
 
+## BeanFactory和ApplicationContext
+BeanFactory可以理解为含有bean集合的工厂类。BeanFactory包含了多种bean的定义，以便在接收到客户端请求时将对应的bean实例化。
+
+BeanFactory还能在实例化对象的时候生成协作类之间的关系。此举将bean自身与bean客户端的配置中解放出来。BeanFactory还包含了bean生命周期的控制，调用客户端的初始化方法和销毁方法。
+
+从表⾯上看，application context如同bean factory⼀样具有bean定义、bean关联关系的设
+置，根据请求分发bean的功能。但application context在此基础上还提供了其他的功能。
+1.提供了⽀持国际化的⽂本消息
+2.统⼀的资源⽂件读取⽅式
+3.已在监听器中注册的bean的事件
+
