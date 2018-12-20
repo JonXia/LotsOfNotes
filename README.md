@@ -4,7 +4,7 @@ that's all.
 
 TODOs list:
 - Spring框架相关整理,SpringMVC源码浅析/调试
-- 数据结构和lintcode学习记录
+- 数据结构和leettcode学习记录 [先学一下算法班...md，leetcode干刷好难啊...](https://github.com/JonXia/alg-nowcoder)
 - kali渗透测试学习记录(web/无线)
 - 基于SpringCloud的微服务架构学习
 
