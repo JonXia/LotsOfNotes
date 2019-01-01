@@ -1,278 +1,278 @@
-## SpringCloud
+### Ribbon核心组件IRule
 
-### Eureka服务注册与发现
+IRule：根据特定算法从服务列表中选取一个需要访问的服务
 
-#### 1.概念：
+#### 七大方法
 
-Spring Cloud 封装了 Netflix 公司开发的 Eureka 模块来实现服务注册和发现(请对比Zookeeper)。
+==IRule是一个接口，七大方法是其自带的落地实现类==
 
-Eureka 采用了 C-S 的设计架构。Eureka Server 作为服务注册功能的服务器，它是服务注册中心。而系统中的其他微服务，使用 Eureka 的客户端连接到 Eureka Server并维持心跳连接。这样系统的维护人员就可以通过 Eureka Server 来监控系统中各个微服务是否正常运行。SpringCloud 的一些其他模块（比如Zuul）就可以通过 Eureka Server 来发现系统中的其他微服务，并执行相关的逻辑。
+- RoundRobinRule：轮询（默认方法）
+- RandomRule：随机
+- AvailabilityFilteringRule：先过滤掉由于多次访问故障而处于断路器跳闸状态的服务，还有并发的连接数量超过阈值的服务，然后对剩余的服务进行轮询
+- WeightedResponseTimeRule：根据平均响应时间计算服务的权重。统计信息不足时会按照轮询，统计信息足够会按照响应的时间选择服务
+- RetryRule：正常时按照轮询选择服务，若过程中有服务出现故障，在轮询一定次数后依然故障，则会跳过故障的服务继续轮询。
+- BestAvailableRule：先过滤掉由于多次访问故障而处于断路器跳闸状态的服务，然后选择一个并发量最小的服务
+- ZoneAvoidanceRule：默认规则，符合判断server所在的区域的性能和server的可用性选择服务
 
-- 组件：Eureka Server（提供注册服务）、 Eureka Client（JAVA客户端，负责发送心跳）
-  Eureka Server提供服务注册服务
-  各个节点启动后，会在EurekaServer中进行注册，这样EurekaServer中的服务注册表中将会存储所有可用服务节点的信息，服务节点的信息可以在界面中直观的看到
+#### 切换规则方法
 
-  EurekaClient是一个Java客户端，用于简化Eureka Server的交互，客户端同时也具备一个内置的、使用轮询(round-robin)负载算法的负载均衡器。在应用启动后，将会向Eureka Server发送心跳(默认周期为30秒)。如果Eureka Server在多个心跳周期内没有接收到某个节点的心跳，EurekaServer将会从服务注册表中把这个服务节点移除（默认90秒）
-
-![Eureka的架构图](pics/Eureka的架构图.png)
-
-#### 2.服务端配置：
-
-- 配置pom.xml
-
-```xml
-	<dependencies>
-		<!--eureka-server服务端 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
-		</dependency>
-		<!-- 修改后立即生效，热部署 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>springloaded</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-	</dependencies>
-```
-
-- 配置application.yml
-
-```yaml
-server:
-  port: 7001
-
-eureka:
-  instance:
-    hostname: eureka7001.com #eureka服务端的实例名称
-  client:
-    register-with-eureka: false     #false表示不向注册中心注册自己。
-    fetch-registry: false     #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
-    service-url:
-      #单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
-      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-```
-
-启动类配置注解：
+只需在==配置类==中配置一个返回具体方法的bean即可
 
 ```java
-@EnableEurekaServer
-```
-
-#### 3.客户端配置：
-
-- 配置pom.xml
-
-```xml
-<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-eureka</artifactId>
-</dependency>
-<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-config</artifactId>
-</dependency>
-```
-
-- 配置application.yml
-
-```yaml
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:7001/eureka
-```
-
-- 配置启动类
-
-```java
-@EnableEurekaClient //本服务启动后会自动注册进eureka服务中
-@EnableDiscoveryClient //服务发现
-```
-
-#### 4. Actuator监控
-
-[Actuator用法很多，参照这个](https://blog.csdn.net/dong_19890208/article/details/52836436)
-
-- 配置pom.xml
-
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-actuator</artifactId>
-</dependency>
-```
-
-- 在总的父工程下添加
-
-```xml
-<build>
-    <finalName>microservicecloud</finalName>
-    <resources>
-        <resource>
-            <!--允许扫描该路径下的资源文件-->
-            <directory>src/main/resources</directory>
-            <filtering>true</filtering>
-        </resource>
-    </resources>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-resources-plugin</artifactId>
-            <configuration>
-                <delimiters>
-                    <!--指定动态获取以$标志开头结尾的信息-->
-                    <delimit>$</delimit>
-                </delimiters>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-```
-
-- 配置application.yml
-
-```yaml
-info:
-  app.name: atguigu-microservicecloud
-  company.name: www.atguigu.com
-  build.artifactId: ${project.artifactId}
-  build.version: ${project.version}
-```
-
-#### 5. Eureka的自我保护机制
-
-Eureka的自我保护机制主要是为了网络异常时保持高可用设计的，当在Eureka中注册的微服务超过设定是时间内（默认90秒）没有向Eureka服务端发送心跳，该微服务会进入自我保护模式。在自我保护模式中，Eureka会保护服务注册表中的信息，不会注销任何服务实例，直至收到的心跳数恢复至阈值以上，该微服务退出自我保护模式。
-
-- 可以在application.yml修改开启或关闭状态
-
-```yaml
-  server:
-    enable-self-preservation: false
-```
-
-#### 6.Eureka服务发现
-
-系统中的微服务可以通过Eureka的服务发现去获得在Eureka中注册的服务的信息，这是一个对外暴露的接口。使用方法（provider中）
-
-- 注入DiscoveryClient 对象（spring包下的），在controller方法中获取
-
-```java
-@Autowired
-private DiscoveryClient discoveryClient;
-
-@ResponseBody
-@GetMapping("/provider/discovery")
-public Object discovery(){
-        List<String> list = discoveryClient.getServices();
-        System.out.println(list);
-        List<ServiceInstance> insList = discoveryClient.getInstances("MICROSERVICECLOUD-DEPT");
-        for (ServiceInstance si:insList) {
-            System.out.println(si.getHost() +"," + si.getServiceId() +"," +si.getPort() +"," +si.getUri() +"," +si.getMetadata());
-        }
-        return this.discoveryClient;
+@Bean
+public IRule MyRule(){
+        return new RandomRule();
     }
 ```
 
-- 在主启动类中加入@EnableDiscoveryClient注解
+### 自定义Ribbon负载均衡算法
+
+#### 配置及包位置
+
+1. 自定义的Ribbon算法类不能放在主启动类所在的包及子报下（确切来说是不能放在@ComponentScan注解的包及子包下），否则会被全局应用到Ribbon服务中。应该把自定义算法类放在另外新建的包下，且这个类应该是为==配置类==。（其实与普通切换负载均衡规则类似，只不过是位置不同而已，普通的可以放在主启动类所在的包，自定义的要放在外面的包下）
+2. 主启动类添加@RibbonClient(name = "微服务名",configuration = XXX.class)注解指定需要用到负载均衡的微服务名及自定义算法的class对象。
 
 ```java
 @SpringBootApplication
 @EnableEurekaClient
-@EnableDiscoveryClient
-public class Provider8001_APP {
+@RibbonClient(name = "MICROSERVICECLOUD-DEPT",configuration = MyRule.class)
+public class Consumer80_APP {
     public static void main(String[] args) {
-        SpringApplication.run(Provider8001_APP.class,args);
+        SpringApplication.run(Consumer80_APP.class,args);
     }
 }
 ```
 
-#### 使用方法（consumer中）
+####通过修改源代码获得自定义算法
 
-在controller方法中使用restTemplate对象调用provider中暴露的URL 并获得返回对象即可
+目标：每个服务调用5次后再进行轮询（调用次数不是很对，懒得改了)
 
 ```java
-@GetMapping("/discovery")
-public Object discovery() {
-        return restTemplate.getForObject(URL_PREFIX+"/provider/discovery",Object.class);
+package com.Rules;
+
+import com.netflix.client.config.IClientConfig;
+import com.netflix.loadbalancer.AbstractLoadBalancerRule;
+import com.netflix.loadbalancer.ILoadBalancer;
+import com.netflix.loadbalancer.RoundRobinRule;
+import com.netflix.loadbalancer.Server;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
+
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
+
+public class MyRule extends AbstractLoadBalancerRule {
+
+    private AtomicInteger nextServerCyclicCounter;
+    private static final boolean AVAILABLE_ONLY_SERVERS = true;
+    private static final boolean ALL_SERVERS = false;
+    private int total = 0;
+    private int currentIndex = 0;
+
+    private static Logger log = LoggerFactory.getLogger(RoundRobinRule.class);
+
+    public MyRule() {
+        nextServerCyclicCounter = new AtomicInteger(0);
+    }
+
+    public MyRule(ILoadBalancer lb) {
+        this();
+        setLoadBalancer(lb);
+    }
+
+    public Server choose(ILoadBalancer lb, Object key) {
+        if (lb == null) {
+            log.warn("no load balancer");
+            return null;
+        }
+
+        Server server = null;
+        int count = 0;
+        while (server == null && count++ < 10) {
+            List<Server> reachableServers = lb.getReachableServers();
+            List<Server> allServers = lb.getAllServers();
+            int upCount = reachableServers.size();
+            int serverCount = allServers.size();
+
+            if ((upCount == 0) || (serverCount == 0)) {
+                log.warn("No up servers available from load balancer: " + lb);
+                return null;
+            }
+            if (total > 5) {
+                total = 0;
+                int nextServerIndex = incrementAndGetModulo(serverCount);
+                currentIndex = nextServerIndex;
+                server = allServers.get(nextServerIndex);
+            }else {
+                if (currentIndex>=serverCount) {
+                    currentIndex = 0;
+                }
+                server = allServers.get(currentIndex);
+                total++;
+            }
+
+
+            if (server == null) {
+                /* Transient. */
+                Thread.yield();
+                continue;
+            }
+
+            if (server.isAlive() && (server.isReadyToServe())) {
+                return (server);
+            }
+
+            // Next.
+            server = null;
+        }
+
+        if (count >= 10) {
+            log.warn("No available alive servers after 10 tries from load balancer: "
+                    + lb);
+        }
+        return server;
+    }
+
+    /**
+     * Inspired by the implementation of {@link AtomicInteger#incrementAndGet()}.
+     *
+     * @param modulo The modulo to bound the value of the counter.
+     * @return The next value.
+     */
+    private int incrementAndGetModulo(int modulo) {
+        for (;;) {
+            int current = nextServerCyclicCounter.get();
+            int next = (current + 1) % modulo;
+            if (nextServerCyclicCounter.compareAndSet(current, next))
+                return next;
+        }
+    }
+
+
+    public Server choose(Object key) {
+        return choose(getLoadBalancer(), key);
+    }
+
+
+    public void initWithNiwsConfig(IClientConfig clientConfig) {
+    }
+}
+
+```
+
+## Feign负载均衡
+
+Feign是一个声明式WebService客户端，使用方法时定义一个接口并在上面添加注解即可。Feign支持可拔插式的编码器和解码器。Spring Cloud对Feign进行了封装，使其支持SpringMVC和HttpMessageConverters。Feign可以与Eureka和Ribbon组合使用以支持负载均衡。
+
+[Feign源码]: https://github.com/OpenFeign/Feign
+
+### 使用案例
+
+1. 新建Feign模块，加入依赖（其实跟80消费者差不多，主要是多了Feign依赖）
+
+```xml
+    <dependencies>
+        <dependency>
+            <groupId>com.XXX</groupId>
+            <artifactId>microservice-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!--热部署-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>springloaded</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+    </dependencies>
+```
+
+1. 因为Feign开发其实是面向接口编程，所以Feign接口可以放在api模块中供各模块使用，所以要在api模块中添加Feign依赖
+2. 在api中编写接口，接口上添加@FeignClient注解，并通过value指定作用的微服务名
+
+```java
+@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+public interface DeptClientService {
+
+    @PostMapping("/dept")
+    public boolean addDept(Dept dept);
+
+    @GetMapping("/dept")
+    public List<Dept> findAll();
+
+    @GetMapping("/dept/{id}")
+    public Dept findById(@PathVariable("id")Integer id);
+}
+
+```
+
+1. 在Feign模块中编写Controller，并注入FeignClient接口，直接调用service接口中的方法即可（因为声明Feign接口时已经指定过微服务，所以访问时会正确地找到微服务）
+
+```java
+@RestController
+@RequestMapping("/consumer")
+public class ConsumerDeptController {
+    @Autowired
+    private DeptClientService service;
+
+    @PostMapping("/dept")
+    public boolean addDept(Dept dept){
+        return service.addDept(dept);
+    }
+
+    @GetMapping("/dept")
+    public List<Dept> findAll(){
+        return service.findAll();
+    }
+
+    @GetMapping("/dept/{id}")
+    public Dept findById(@PathVariable("id")Integer id){
+        return service.findById(id);
+    }
 }
 ```
 
-#### 7. Eureka集群配置
+1. 修改Feign模块的主启动类，加入@EnableFeignClients注解和@ComponentScan注解（主要是扫描api中声明的接口）
 
-##### 集群
-
-集群就是在不同的机器上配置相同的服务来构建要一个大的运算整体
-
-##### 实现集群
-
-1. 新建N个Eureka Server模块
-2. 每个模块的pom.xml中加入与单个Eureka Server相同的依赖
-3. 每个模块加入主程序（记得加@EnableEurekaServer注解）
-4. 修改hosts文件（Win7的路径是C:\Windows\System32\drivers\etc）
-
-```shell
-127.0.0.1 eureka7001.com
-127.0.0.1 eureka7002.com
-127.0.0.1 eureka7003.com
+```java
+@SpringBootApplication
+@EnableEurekaClient
+@EnableFeignClients(basePackages = {"com.XXX"})
+@ComponentScan("com.XXX")
+public class Consumer80Feign_APP {
+    public static void main(String[] args) {
+        SpringApplication.run(Consumer80Feign_APP.class,args);
+    }
+}
 ```
 
-1. 修改Eureka Server模块的application.yml文件，加入集群，主要修改两个地方：
+1. 启动后访问，即会按照轮询的方式调用provider集群
 
-- hostname：修改为hosts文件中映射的地址
-- service-url下的defaultZone节点：填入集群中另外的server服务端的地址
+### 总结
 
-```yml
-server:
-  port: 7001
-eureka:
-  instance:
-    hostname: eureka7001.com    #hostname为hosts文件中映射的地址
-  client:
-    register-with-eureka: false     #false表示不向注册中心注册自己
-    fetch-registry: false           #false表示自己就是注册中心，职责是维护实例，不参加检索
-    service-url:
-      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/    #设置eureka server的交互地址
-      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/  #其他两个服务端的地址
-```
-
-1. 修改Eureka Client模块的application.yml文件，使其向集群注册服务
-
-- service-url下的defaultZone节点：填入集群中需要向其注册server服务端的地址
-
-```yml
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
-```
-
-1. 访问地址
-
-```shell
-http://eureka7001.com:7001
-http://eureka7002.com:7002
-http://eureka7003.com:7003
-```
-
-1. ==注：defaultZone中eureka/后缀是必须的，如果删除，Server类不会报错，但是Client注册时会报404错误==
-
-##### Eureka与Zookeeper对比
-
-##### CAP设计原则不同
-
-Eureka遵守AP，Zookeeper遵守CP（C：强一致性，A：高可用，P：分区容错性，三者只能选其二，高并发下P必选）
-
-##### 网络波动下两者的处理对比
-
-| Zookeeper                                                    | Eureka                                                       |
-| :----------------------------------------------------------- | ------------------------------------------------------------ |
-| 当网络出现故障时，剩余zk集群会发起投票选举新的leader，但是此过程会持续30~120s，此过程对于高并发来说十分漫长，会导致整个注册服务的瘫痪，这是不可容忍的 | 在15分钟内85%的节点都没有心跳，则注册中心 会认为客户端与之出现了网络故障，则会进入自动保护模式。1.Eureka不会移除没有收到心跳的服务；2.新的服务仍能在服务端注册，但是暂时不会被同步到其他节点上直到网络稳定 |
-
-##### 结论
-
-Eureka可以很好的应对网络故障导致部分节点失去连接的情况，而不会像zookeeper那样导致整个注册服务系统的瘫痪。
-
+- Feign通过接口方法调用REST服务，在Eureka中查找对应的服务
+- Feign集成了Ribbon技术，所以也支持负载均衡（轮询）
