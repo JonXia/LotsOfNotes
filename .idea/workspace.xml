@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="更新Ribbon和Feign">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/开发框架/Spring/SpringCloud.md" beforeDir="false" afterPath="$PROJECT_DIR$/开发框架/Spring/SpringCloud.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,26 +14,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringCloud.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="537">
-                <caret line="259" selection-start-line="259" selection-end-line="259" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="114">
-                <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <first_editor relative-caret-position="684">
+                <caret line="302" column="34" selection-start-line="302" selection-start-column="34" selection-end-line="302" selection-end-column="34" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -52,8 +38,9 @@
       <list>
         <option value="$PROJECT_DIR$/开发框架/Spring/SpringBoot.md" />
         <option value="$PROJECT_DIR$/心得/随便写的.md" />
-        <option value="$PROJECT_DIR$/开发框架/Spring/SpringCloud.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/心得/2018总结.md" />
+        <option value="$PROJECT_DIR$/开发框架/Spring/SpringCloud.md" />
       </list>
     </option>
   </component>
@@ -76,6 +63,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -97,21 +86,18 @@
             <path>
               <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
               <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
-              <item name="开发框架" type="462c0819:PsiDirectoryNode" />
-              <item name="Spring" type="462c0819:PsiDirectoryNode" />
-              <item name="pics" type="462c0819:PsiDirectoryNode" />
+              <item name="心得" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -180,7 +166,10 @@
       <workItem from="1546352035264" duration="39000" />
       <workItem from="1546354297687" duration="23000" />
       <workItem from="1546357560577" duration="46000" />
-      <workItem from="1546502241824" duration="211000" />
+      <workItem from="1546502241824" duration="254000" />
+      <workItem from="1546573166634" duration="160000" />
+      <workItem from="1546588284642" duration="1823000" />
+      <workItem from="1546697369056" duration="671000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -238,17 +227,24 @@
       <option name="project" value="LOCAL" />
       <updated>1546357595114</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="更新Ribbon和Feign">
+      <created>1546502477062</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1546502477062</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8953000" />
+    <option name="totallyTimeSpent" value="11650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21715818" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17158177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -307,18 +303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringCloud.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="537">
-            <caret line="259" selection-start-line="259" selection-end-line="259" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/心得/随便写的.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -331,11 +315,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="114">
-            <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <first_editor relative-caret-position="209">
+            <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/心得/2018总结.md" />
+    <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringCloud.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="684">
+            <caret line="302" column="34" selection-start-line="302" selection-start-column="34" selection-end-line="302" selection-end-column="34" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
