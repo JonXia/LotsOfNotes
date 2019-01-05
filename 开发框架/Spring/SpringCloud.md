@@ -301,3 +301,4 @@ public class Consumer80Feign_APP {
 - 熔断机制是应对雪崩效应的一种==链路保护机制==，一般存在于服务端
 - 当扇出链路的某个服务出现故障或响应超时，会进行==服务降级==，进而==熔断该节点的服务调用==，快速返回“错误”的相应信息。、
 - Hystrix的熔断存在阈值，缺省是5秒内20次调用失败就会触发
+- Hystrix源码：[Hystrix源码]: https://github.com/Netflix/Hystrix
