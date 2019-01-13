@@ -7,6 +7,6 @@ TODOs list:
 - [算法班+leetcode](https://github.com/JonXia/alg-nowcoder) （1月更完）
 - kali渗透测试学习记录(web/无线) （暂时鸽了，咕咕咕）
 - 《重新定义SpringCloud实战》学习 （1、2月份更完）
-- 机器学习(一不小心就报了个Andrew Ng大神的机器学习，更吧更吧) （End before April 1）
+- 机器学习(一不小心就报了个Andrew Ng(吴恩达)大神的机器学习，更吧更吧) （End before April 1）
 
 **Come on!**

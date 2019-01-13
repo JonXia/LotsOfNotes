@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="更新Hystrix(test)">
-      <change afterPath="$PROJECT_DIR$/开发框架/Spring/重新定义SpringCloud实战/第一章/第一章 微服务与SpringCloud.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/心得/19.1.11.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -30,12 +28,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/心得/19.1.11.md">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="11" selection-start-column="11" selection-end-column="11" />
+              <first_editor relative-caret-position="171">
+                <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -44,13 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="95">
-                <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-              </first_editor>
+              <first_editor />
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
@@ -98,6 +94,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,7 +137,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -153,7 +149,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -227,7 +223,8 @@
       <workItem from="1546822992212" duration="323000" />
       <workItem from="1547110038931" duration="606000" />
       <workItem from="1547169056160" duration="45000" />
-      <workItem from="1547169183352" duration="5495000" />
+      <workItem from="1547169183352" duration="6303000" />
+      <workItem from="1547342024248" duration="801000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -306,17 +303,30 @@
       <option name="project" value="LOCAL" />
       <updated>1546703333342</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="计划总是会变的...+SpringCloud部分改为读书笔记啦">
+      <created>1547200581186</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1547200581186</updated>
+    </task>
+    <task id="LOCAL-00013" summary="新ml笔记">
+      <created>1547342169038</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1547342169038</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18386000" />
+    <option name="totallyTimeSpent" value="19995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17962466" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1816354" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -332,14 +342,13 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32914925" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3282123" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="JRebel Executor" order="12" />
       <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="right" x="0" y="0" width="337" height="648" id="Documentation" side_tool="true" weight="0.3297587" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -348,6 +357,7 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" x="0" y="0" width="337" height="648" id="Documentation" order="8" side_tool="true" weight="0.3297587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +415,9 @@
     <MESSAGE value="更新Ribbon和Feign" />
     <MESSAGE value="更新Hystrix" />
     <MESSAGE value="更新Hystrix(test)" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新Hystrix(test)" />
+    <MESSAGE value="计划总是会变的...+SpringCloud部分改为读书笔记啦" />
+    <MESSAGE value="新ml笔记" />
+    <option name="LAST_COMMIT_MESSAGE" value="新ml笔记" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringBoot.md">
@@ -449,8 +461,8 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/心得/19.1.11.md" />
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/重新定义SpringCloud实战/第一章/第一章 微服务与SpringCloud.md">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="57">
@@ -461,13 +473,12 @@
           </second_editor>
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/心得/19.1.11.md">
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="11" selection-start-column="11" selection-end-column="11" />
-          </first_editor>
+          <first_editor />
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
@@ -477,8 +488,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="95">
-            <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <first_editor relative-caret-position="171">
+            <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
