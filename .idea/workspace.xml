@@ -44,9 +44,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="339">
-                <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="490">
+                <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -85,9 +85,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="220" />
-    <option name="y" value="142" />
-    <option name="width" value="1669" />
-    <option name="height" value="908" />
+    <option name="y" value="141" />
+    <option name="width" value="1670" />
+    <option name="height" value="909" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -169,7 +169,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -245,7 +245,7 @@
       <workItem from="1547169056160" duration="45000" />
       <workItem from="1547169183352" duration="6303000" />
       <workItem from="1547342024248" duration="826000" />
-      <workItem from="1547427432146" duration="10479000" />
+      <workItem from="1547427432146" duration="11766000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -352,11 +352,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547449540778</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="更新机器学习week1">
+      <created>1547449675095</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1547449675095</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30499000" />
+    <option name="totallyTimeSpent" value="31786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="176" y="114" width="1335" height="726" extended-state="0" />
@@ -526,9 +533,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="339">
-            <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="490">
+            <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

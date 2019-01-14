@@ -16,7 +16,20 @@
 
 ### 2. 单变量线性回归(Linear Regression with One Variable)
 
-房价例子（监督学习）：给定正确的俄勒冈州波特兰市的住房价格数据集m，预测Size条件下房价Price的值；看图：
+房价例子（监督学习/回归问题）：给定正确的俄勒冈州波特兰市的住房价格数据集，预测Size条件下房价Price的值；看图：
 
 ![](http://www.ai-start.com/ml2014/images/8e76e65ca7098b74a2e9bc8e9577adfc.png)
+
+假如这个回归问题的训练集如图所示：
+
+![](http://www.ai-start.com/ml2014/images/44c68412e65e62686a96ad16f278571f.png)
+
+那么，在这里，我们把这个问题标记如下：
+
+- m代表训练集中实例的数量
+- x代表特征/输入变量
+- y代表目标变量/输出变量
+- (x,y)代表训练集中的实例
+- ![](https://latex.codecogs.com/gif.latex?%5Cleft%20%28%20x%5E%7B%28i%29%7D%2Cy%5E%7B%28i%29%7D%20%5Cright%20%29)代表第i个观察实例
+- h代表学习算法的解决方案或函数也称为假设（hypothesis）
 
