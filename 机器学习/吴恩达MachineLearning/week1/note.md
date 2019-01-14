@@ -16,7 +16,7 @@
 
 ### 2. 单变量线性回归(Linear Regression with One Variable)
 
-房价例子（监督学习）：给定正确的数据集m，预测Size条件下房价Price的值；看图：
+房价例子（监督学习）：给定正确的俄勒冈州波特兰市的住房价格数据集m，预测Size条件下房价Price的值；看图：
 
 ![](http://www.ai-start.com/ml2014/images/8e76e65ca7098b74a2e9bc8e9577adfc.png)
 

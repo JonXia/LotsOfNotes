@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="更新Hystrix(test)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="更新机器学习week1">
       <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,7 +32,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="209">
-                <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+                <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -46,8 +45,8 @@
         <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="418">
-                <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <first_editor relative-caret-position="339">
+                <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -246,7 +245,7 @@
       <workItem from="1547169056160" duration="45000" />
       <workItem from="1547169183352" duration="6303000" />
       <workItem from="1547342024248" duration="826000" />
-      <workItem from="1547427432146" duration="10376000" />
+      <workItem from="1547427432146" duration="10479000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -346,11 +345,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547354603181</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="更新机器学习week1">
+      <created>1547449540778</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1547449540778</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30396000" />
+    <option name="totallyTimeSpent" value="30499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="176" y="114" width="1335" height="726" extended-state="0" />
@@ -447,7 +453,8 @@
     <MESSAGE value="计划总是会变的...+SpringCloud部分改为读书笔记啦" />
     <MESSAGE value="新ml笔记" />
     <MESSAGE value="更新Hystrix(test)" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新Hystrix(test)" />
+    <MESSAGE value="更新机器学习week1" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新机器学习week1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringBoot.md">
@@ -509,7 +516,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="209">
-            <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -520,8 +527,8 @@
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="418">
-            <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <first_editor relative-caret-position="339">
+            <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
