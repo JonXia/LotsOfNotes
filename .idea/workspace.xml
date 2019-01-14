@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="更新机器学习week1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,8 +46,8 @@
         <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="490">
-                <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <first_editor relative-caret-position="359">
+                <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -95,8 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,6 +156,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,6 +247,7 @@
       <workItem from="1547169183352" duration="6303000" />
       <workItem from="1547342024248" duration="826000" />
       <workItem from="1547427432146" duration="11766000" />
+      <workItem from="1547450935528" duration="2749000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -359,17 +361,31 @@
       <option name="project" value="LOCAL" />
       <updated>1547449675095</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="更新机器学习week1">
+      <created>1547450970220</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1547450970220</updated>
+    </task>
+    <task id="LOCAL-00018" summary="更新机器学习week1">
+      <created>1547454744086</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1547454744086</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31786000" />
+    <option name="totallyTimeSpent" value="34535000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="176" y="114" width="1335" height="726" extended-state="0" />
+    <frame x="176" y="113" width="1336" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21456538" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21439749" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -534,8 +550,8 @@
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="490">
-            <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <first_editor relative-caret-position="359">
+            <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

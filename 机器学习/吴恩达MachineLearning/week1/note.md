@@ -40,3 +40,7 @@
 我将选择最初的使用规则h代表hypothesis，因而，要解决房价预测问题，我们实际上是要将训练集“喂”给我们的学习算法，进而学习得到一个假设h，然后将我们要预测的房屋的尺寸作为输入变量输入给h，预测出该房屋的交易价格作为输出变量输出为结果。那么，对于我们的房价预测问题，我们该如何表达 ？
 一种可能的表达式为：![h_{\Theta }\left ( x \right )=\Theta _{0}+\Theta _{1}x](https://latex.codecogs.com/gif.latex?h_%7B%5CTheta%20%7D%5Cleft%20%28%20x%20%5Cright%20%29%3D%5CTheta%20_%7B0%7D&plus;%5CTheta%20_%7B1%7Dx)，因为只含有一个特征/输入变量，因此这样的问题叫作单变量线性回归问题。
 
+那么代价函数(Cost Function)![J(\Theta _{0},\Theta _{1})](https://latex.codecogs.com/gif.latex?J%28%5CTheta%20_%7B0%7D%2C%5CTheta%20_%7B1%7D%29)就为：![ J(\Theta _{0},\Theta _ {1})=\frac{1}{2}m\sum_{i=1}^{m}(h_{\Theta }(x^{(i)})-y^{(i)})) ](https://latex.codecogs.com/gif.latex?J%28%5CTheta%20_%7B0%7D%2C%5CTheta%20_%20%7B1%7D%29%3D%5Cfrac%7B1%7D%7B2%7Dm%5Csum_%7Bi%3D1%7D%5E%7Bm%7D%28h_%7B%5CTheta%20%7D%28x%5E%7B%28i%29%7D%29-y%5E%7B%28i%29%7D%29%29)
+
+我们的目标就是调整![\Theta _{0}](https://latex.codecogs.com/gif.latex?%5CTheta%20_%7B0%7D)和![\Theta _{1}](https://latex.codecogs.com/gif.latex?%5CTheta%20_%7B0%7D)使代价函数的结果最小，即使得出的函数曲线尽量贴合数据
+
