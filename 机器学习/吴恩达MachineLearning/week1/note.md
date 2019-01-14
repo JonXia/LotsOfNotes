@@ -33,3 +33,10 @@
 - ![](https://latex.codecogs.com/gif.latex?%5Cleft%20%28%20x%5E%7B%28i%29%7D%2Cy%5E%7B%28i%29%7D%20%5Cright%20%29)代表第i个观察实例
 - h代表学习算法的解决方案或函数也称为假设（hypothesis）
 
+![](http://www.ai-start.com/ml2014/images/ad0718d6e5218be6e6fce9dc775a38e6.png)
+
+这个是监督学习的工作方式，其中h根据x的输入得出y值，那么也可以说h是从x到y的函数映射
+
+我将选择最初的使用规则h代表hypothesis，因而，要解决房价预测问题，我们实际上是要将训练集“喂”给我们的学习算法，进而学习得到一个假设h，然后将我们要预测的房屋的尺寸作为输入变量输入给h，预测出该房屋的交易价格作为输出变量输出为结果。那么，对于我们的房价预测问题，我们该如何表达 ？
+一种可能的表达式为：![h_{\Theta }\left ( x \right )=\Theta _{0}+\Theta _{1}x](https://latex.codecogs.com/gif.latex?h_%7B%5CTheta%20%7D%5Cleft%20%28%20x%20%5Cright%20%29%3D%5CTheta%20_%7B0%7D&plus;%5CTheta%20_%7B1%7Dx)，因为只含有一个特征/输入变量，因此这样的问题叫作单变量线性回归问题。
+
