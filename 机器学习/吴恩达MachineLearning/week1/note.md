@@ -94,4 +94,4 @@
 
 首先第一个问题，![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太大的话梯度下降法可能会直接越过最低点，甚至无法收敛
 
-<img src="pics/αtoolarge.png">
+<img height=300 width=500 src="pics/αtoolarge.png">
