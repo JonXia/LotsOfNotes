@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="fix:location 吴恩达MachineLearning&#10;1.图片大小调整" />
+    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="fix:location 吴恩达MachineLearning&#10;1.图片大小调整">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +47,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="153">
-                <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+                <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -58,6 +61,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Theta</find>
+      <find>阿尔法</find>
     </findStrings>
     <replaceStrings>
       <replace>theta</replace>
@@ -155,12 +159,13 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\jweb\LotsOfNotes\开发框架\Spring\重新定义SpringCloud实战\第一章" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\jweb\LotsOfNotes\开发框架\Spring" />
       <recent name="C:\jweb\LotsOfNotes\心得" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\jweb\LotsOfNotes\机器学习\吴恩达MachineLearning\week1\pics" />
+      <recent name="C:\jweb\LotsOfNotes\开发框架\Spring\重新定义SpringCloud实战\第一章" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -229,7 +234,7 @@
       <workItem from="1547169183352" duration="6303000" />
       <workItem from="1547342024248" duration="826000" />
       <workItem from="1547427432146" duration="11766000" />
-      <workItem from="1547450935528" duration="22146000" />
+      <workItem from="1547450935528" duration="22522000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -420,11 +425,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547539457470</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix:location 吴恩达MachineLearning&#10;1.图片大小调整">
+      <created>1547539570895</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1547539570895</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fix:location 吴恩达MachineLearning&#10;1.图片大小调整">
+      <created>1547539753916</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1547539753916</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53932000" />
+    <option name="totallyTimeSpent" value="54308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -605,7 +624,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="153">
-            <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+            <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
