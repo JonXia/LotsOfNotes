@@ -93,7 +93,7 @@
 - 如果直接把![西塔1](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})放在局部最低点，接下来梯度下降算法接下来该怎么做？
 
 首先第一个问题，![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太大的话梯度下降法可能会直接越过最低点，甚至无法收敛
-<img height=550 width=890 src="https://github.com/JonXia/LotsOfNotes/blob/master/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%90%B4%E6%81%A9%E8%BE%BEMachineLearning/week1/pics/%CE%B1toolarge.png">
+<img width=890 src="https://github.com/JonXia/LotsOfNotes/blob/master/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%90%B4%E6%81%A9%E8%BE%BEMachineLearning/week1/pics/%CE%B1toolarge.png">
 ![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太小的话，即我的学习速率太小，需要很长时间才能移动到最低点；
 
 第二个问题![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)已经到最低点的时候，对这个点求导为0，即是这条上面那条红色斜线的斜率为0；那么这个时候我们的梯度下降算法式子为
