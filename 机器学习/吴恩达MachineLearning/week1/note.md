@@ -90,8 +90,26 @@
 
 这里涉及到了两个问题：
 - ![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太大或者![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太小会出现什么情况？
-- 如果直接把![西塔1](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})放在局部最低点，接下来梯度下降算法该怎么做？
+- 如果直接把![西塔1](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})放在局部最低点，接下来梯度下降算法接下来该怎么做？
 
 首先第一个问题，![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太大的话梯度下降法可能会直接越过最低点，甚至无法收敛
+<img height=550 width=890 src="https://github.com/JonXia/LotsOfNotes/blob/master/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%90%B4%E6%81%A9%E8%BE%BEMachineLearning/week1/pics/%CE%B1toolarge.png">
+![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太小的话，即我的学习速率太小，需要很长时间才能移动到最低点；
 
-<img height=550 width=890 src="pics/αtoolarge.png">
+第二个问题![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)已经到最低点的时候，对这个点求导为0，即是这条上面那条红色斜线的斜率为0；那么这个时候我们的梯度下降算法式子为
+
+![\theta _ {j} :=\theta _ {j}-\alpha \ast 0](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{j}&space;:=\theta&space;_&space;{j}-\alpha&space;\ast&space;0)
+即![\theta _ {j} :=\theta _ {j}](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{j}&space;:=\theta&space;_&space;{j})，那么，到这里，梯度下降算法其实什么都没做，他也不会改变参数的值。那么这也解释了，为什么学习速率![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)保持不变的时候，梯度下降也会收敛到最低点。
+
+那么，在梯度下降的过程中，式子是怎么变化的呢？
+
+举一个例子，如图代价函数![J(θ)](https://latex.codecogs.com/gif.latex?J(\theta))，我们要找到它的最小值，首先初始化我们的梯度下降算法，可以看出导数项对应的斜率是蛮陡的，但是当迭代多次之后，导数项会越来越小，我的步子自然会越来越小，这时候就自然而然的收敛到最小值了。
+
+![](http://www.ai-start.com/ml2014/images/4668349e04cf0c4489865e133d112e98.png)
+
+>```
+>回顾一下，在梯度下降法中，当我们接近局部最低点时，梯度下降法会自动采取更小的幅度，这是因为当我们接近局部最低点时，很显然在局部最低时导数等于零，所以当我们接近局部最低时，导数值会自动变得越来越小，所以梯度下降将自动采取较小的幅度，这就是梯度下降的做法。所以实际上没有必要再另外减小。
+>```
+
+**这就是梯度下降算法，你可以用它来最小化任何代价函数**
+
