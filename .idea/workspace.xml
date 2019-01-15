@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="feat&amp;fix:location change&amp;add &#10;1.增加梯度下降&#10;2.LaTex公式修改">
+    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="feat:location 吴恩达MachineLearning&#10;1.修改图片格式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" afterDir="false" />
     </list>
@@ -47,7 +47,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="537">
-                <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
+                <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -128,6 +128,14 @@
               <item name="机器学习" type="462c0819:PsiDirectoryNode" />
               <item name="吴恩达MachineLearning" type="462c0819:PsiDirectoryNode" />
               <item name="week1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
+              <item name="机器学习" type="462c0819:PsiDirectoryNode" />
+              <item name="吴恩达MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="week1" type="462c0819:PsiDirectoryNode" />
+              <item name="pics" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,7 +232,7 @@
       <workItem from="1547169183352" duration="6303000" />
       <workItem from="1547342024248" duration="826000" />
       <workItem from="1547427432146" duration="11766000" />
-      <workItem from="1547450935528" duration="19144000" />
+      <workItem from="1547450935528" duration="19563000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -366,11 +374,32 @@
       <option name="project" value="LOCAL" />
       <updated>1547531741441</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat:location 吴恩达MachineLearning&#10;1.补充梯度下降&#10;2.测试markdown">
+      <created>1547535899260</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1547535899260</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat:location 吴恩达MachineLearning&#10;1.补充梯度下降&#10;2.测试markdown">
+      <created>1547535972280</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1547535972280</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat:location 吴恩达MachineLearning&#10;1.修改图片格式">
+      <created>1547536205487</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1547536205487</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50930000" />
+    <option name="totallyTimeSpent" value="51349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -470,7 +499,9 @@
     <MESSAGE value="更新Hystrix(test)" />
     <MESSAGE value="更新机器学习week1" />
     <MESSAGE value="feat&amp;fix:location change&amp;add &#10;1.增加梯度下降&#10;2.LaTex公式修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat&amp;fix:location change&amp;add &#10;1.增加梯度下降&#10;2.LaTex公式修改" />
+    <MESSAGE value="feat:location 吴恩达MachineLearning&#10;1.补充梯度下降&#10;2.测试markdown" />
+    <MESSAGE value="feat:location 吴恩达MachineLearning&#10;1.修改图片格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:location 吴恩达MachineLearning&#10;1.修改图片格式" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringBoot.md">
@@ -540,11 +571,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/pics/αtoolarge.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="537">
-            <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
+            <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
