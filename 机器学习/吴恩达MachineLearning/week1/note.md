@@ -46,10 +46,11 @@
 我们的目标就是调整![\theta _{0}](https://latex.codecogs.com/gif.latex?%5Ctheta%20_%7B0%7D)和![\theta _{1}](https://latex.codecogs.com/gif.latex?%5Ctheta%20_%7B0%7D)使代价函数的结果最小，即使得出的函数曲线尽量贴合数据
 
 相关的式子：
+
 ![](http://www.ai-start.com/ml2014/images/10ba90df2ada721cf1850ab668204dc9.png)
 
 我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化为![h_{\theta }(x)](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x))
-代价函数在x=1时，J(\theta 1)=0，左边的函数曲线（直线）对应了所有的数据，
+代价函数在![x=1](https://latex.codecogs.com/gif.latex?x=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，左边的函数曲线（直线）对应了所有的数据，
 
 ![](http://www.ai-start.com/ml2014/images/2c9fe871ca411ba557e65ac15d55745d.png)
 ### 3. 轮廓图（等高线图）
@@ -60,7 +61,7 @@
 
 梯度下降是很常用的解决线性回归，最小化函数的方式；我们在这里使用梯度下降算法求代价函数的![](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)最小值。
 
-梯度下降的思想是，给定一系列\theta 值，然后我们找到一个能让代价函数下降最多的值的集合，然后重复这个步骤知道找到局部的最小值（local minimum），但是我们没有尝试完所有的组合，所以这个最小值不是全局最小值（global minimum）
+梯度下降的思想是，给定一系列θ值，然后我们找到一个能让代价函数下降最多的值的集合，然后重复这个步骤知道找到局部的最小值（local minimum），但是我们没有尝试完所有的组合，所以这个最小值不是全局最小值（global minimum）
 
 梯度下降的过程如图所示：
 
@@ -76,4 +77,21 @@
 
 #### 梯度下降的直观理解
 
-\theta _ {j} :=\theta _ {j}-\alpha \frac{\partial }{\partial \theta _{j}}J(\theta)
+举例，我们的梯度下降算法如下：
+
+![\theta _ {j} :=\theta _ {j}-\alpha \frac{\partial }{\partial \theta _{j}}J(\theta)](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{j}&space;:=\theta&space;_&space;{j}-\alpha&space;\frac{\partial&space;}{\partial&space;\theta&space;_{j}}J(\theta&space;_{j})))
+
+描述：对θ赋值，使得按梯度下降最快方向进行，一直迭代下去，最终得到局部最小值。其中α是学习率（learning rate），它决定了我们沿着能让代价函数下降程度最大的方向向下迈出的步子有多大。
+
+对于这个问题，变成了求下图红色斜线的斜率，也就是那条红色的切线，当我们娶到如图中的切点时，我们求导得到了正斜率，这个式子就变成了![](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1}&space;:=\theta&space;_&space;{1}-\alpha&space;\frac{\partial&space;}{\partial&space;\theta&space;_{1}}J(\theta&space;_{1}))
+通过它，我们得到了一个新的![西塔1](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})，这个![](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})等于![](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})减去一个正数的斜率乘以![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)
+
+![](http://www.ai-start.com/ml2014/images/ee916631a9f386e43ef47efafeb65b0f.png)
+
+这里涉及到了两个问题：
+- ![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太大或者![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太小会出现什么情况？
+- 如果直接把![西塔1](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})放在局部最低点，接下来梯度下降算法该怎么做？
+
+首先第一个问题，![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)太大的话梯度下降法可能会直接越过最低点，甚至无法收敛
+
+<img src="pics/αtoolarge.png">
