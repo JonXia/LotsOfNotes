@@ -26,31 +26,30 @@
 
 那么，在这里，我们把这个问题标记如下：
 
-- m代表训练集中实例的数量
-- x代表特征/输入变量
-- y代表目标变量/输出变量
-- (x,y)代表训练集中的实例
+- ![m](https://latex.codecogs.com/gif.latex?m)代表训练集中实例的数量
+- ![x](https://latex.codecogs.com/gif.latex?x)代表特征/输入变量
+- ![y](https://latex.codecogs.com/gif.latex?y)代表目标变量/输出变量
+- ![(x,y)](https://latex.codecogs.com/gif.latex?(x,y))代表训练集中的实例
 - ![](https://latex.codecogs.com/gif.latex?%5Cleft%20%28%20x%5E%7B%28i%29%7D%2Cy%5E%7B%28i%29%7D%20%5Cright%20%29)代表第i个观察实例
-- h代表学习算法的解决方案或函数也称为假设（hypothesis）
+- ![h](https://latex.codecogs.com/gif.latex?h)代表学习算法的解决方案或函数也称为假设（hypothesis）
 
 ![](http://www.ai-start.com/ml2014/images/ad0718d6e5218be6e6fce9dc775a38e6.png)
 
-这个是监督学习的工作方式，其中h根据x的输入得出y值，那么也可以说h是从x到y的函数映射
+这个是监督学习的工作方式，其中![h](https://latex.codecogs.com/gif.latex?h)根据![x](https://latex.codecogs.com/gif.latex?x)的输入得出![y](https://latex.codecogs.com/gif.latex?y)值，那么也可以说![h](https://latex.codecogs.com/gif.latex?h)是从![x](https://latex.codecogs.com/gif.latex?x)到![y](https://latex.codecogs.com/gif.latex?y)的函数映射
 
-我将选择最初的使用规则h代表hypothesis，因而，要解决房价预测问题，我们实际上是要将训练集“喂”给我们的学习算法，进而学习得到一个假设h，然后将我们要预测的房屋的尺寸作为输入变量输入给h，预测出该房屋的交易价格作为输出变量输出为结果。那么，对于我们的房价预测问题，我们该如何表达 ？
-一种可能的表达式为：![h_{\theta }\left ( x \right )=\theta _{0}+\theta _{1}x](https://latex.codecogs.com/gif.latex?h_%7B%5Ctheta%20%7D%5Cleft%20%28%20x%20%5Cright%20%29%3D%5Ctheta%20_%7B0%7D&plus;%5Ctheta%20_%7B1%7Dx)，因为只含有一个特征/输入变量，因此这样的问题叫作单变量线性回归问题。
+我将选择最初的使用规则![h](https://latex.codecogs.com/gif.latex?h)代表hypothesis，因而，要解决房价预测问题，我们实际上是要将训练集“喂”给我们的学习算法，进而学习得到一个假设![h](https://latex.codecogs.com/gif.latex?h)，然后将我们要预测的房屋的尺寸作为输入变量输入给![h](https://latex.codecogs.com/gif.latex?h)，预测出该房屋的交易价格作为输出变量输出为结果。那么，对于我们的房价预测问题，我们该如何表达？
+一种可能的表达式为：![h_{\theta }\left ( x \right )=\theta _{0}+\theta _{1}x](https://latex.codecogs.com/gif.latex?h_%7B%5Ctheta%20%7D%5Cleft%20%28%20x%20%5Cright%20%29%3D%5Ctheta%20_%7B0%7D&plus;%5Ctheta%20_%7B1%7Dx)，因为只含有一个特征/输入变量，因此这样的问题叫作**单变量线性回归问题**。
 
-那么代价函数(Cost Function)![J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)就为：![ J(\theta _{0},\theta _ {1})=\frac{1}{2}m\sum_{i=1}^{m}(h_{\theta }(x^{(i)})-y^{(i)})) ](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%20%7B1%7D%29%3D%5Cfrac%7B1%7D%7B2%7Dm%5Csum_%7Bi%3D1%7D%5E%7Bm%7D%28h_%7B%5Ctheta%20%7D%28x%5E%7B%28i%29%7D%29-y%5E%7B%28i%29%7D%29%29)
-这里的1/2m的参数无论怎么改变，其实都是一样的，只不过最后的曲线会小一些罢了
+那么代价函数(Cost Function)![J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)就为：![ JJ(\theta _{0},\theta _ {1})=\frac{1}{2}m\sum_{i=1}^{m}(h_{\theta }(x^{(i)})-y^{(i)})^2 ](https://latex.codecogs.com/gif.latex?J(\theta&space;_{0},\theta&space;_&space;{1})=\frac{1}{2}m\sum_{i=1}^{m}(h_{\theta&space;}(x^{(i)})-y^{(i)})^2)
+这里的![1/2m](https://latex.codecogs.com/gif.latex?\frac{1}{2}m)的参数无论怎么改变，其实都是一样的，只不过最后的曲线会小一些罢了
 
 我们的目标就是调整![\theta _{0}](https://latex.codecogs.com/gif.latex?%5Ctheta%20_%7B0%7D)和![\theta _{1}](https://latex.codecogs.com/gif.latex?%5Ctheta%20_%7B0%7D)使代价函数的结果最小，即使得出的函数曲线尽量贴合数据
 
-相关的式子：
+上述例子中相关的式子：
 
 ![](http://www.ai-start.com/ml2014/images/10ba90df2ada721cf1850ab668204dc9.png)
 
-我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化为![h_{\theta }(x)](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x))
-代价函数在![x=1](https://latex.codecogs.com/gif.latex?x=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，左边的函数曲线（直线）对应了所有的数据，
+我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化掉，![h_{\theta }(x)=\theta _{1}x](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)=\theta&space;_{1}x)，代价函数在![\theta==1](https://latex.codecogs.com/gif.latex?\theta=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，即h正确拟合，左边的函数曲线（直线）对应了所有的数据，
 
 ![](http://www.ai-start.com/ml2014/images/2c9fe871ca411ba557e65ac15d55745d.png)
 ### 3. 轮廓图（等高线图）
@@ -75,7 +74,7 @@
 - 在批量梯度下降中，我们每一次都会让所有的参数同时变化（即所有的参数减去学习速率乘以代价函数的导数）
 - ![\alpha \frac{\partial }{\partial \theta _{0} }J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta%20_%7B0%7D%20%7DJ%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)和![\alpha \frac{\partial }{\partial \theta _{1} }J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta%20_%7B1%7D%20%7DJ%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)其实是微分项
 
-#### 梯度下降的直观理解
+#### 4.1 梯度下降的直观理解
 
 举例，我们的梯度下降算法如下：
 
@@ -105,13 +104,15 @@
 
 举一个例子，如图代价函数![J(θ)](https://latex.codecogs.com/gif.latex?J(\theta))，我们要找到它的最小值，首先初始化我们的梯度下降算法，可以看出导数项对应的斜率是蛮陡的，但是当迭代多次之后，导数项会越来越小，我的步子自然会越来越小，这时候就自然而然的收敛到最小值了。
 
-![](http://www.ai-start.com/ml2014/images/4668349e04cf0c4489865e133d112e98.png)
+![](pics/αtozero.png)
 
 >```
->回顾一下，在梯度下降法中，当我们接近局部最低点时，梯度下降法会自动采取更小的幅度，这是因为当我们接近局部最低点时，很显然在局部最低时导数等于零，所以当我们接近局部最低时，导数值会自动变得越来越小，所以梯度下降将自动采取较小的幅度，这就是梯度下降的做法。所以实际上没有必要再另外减小![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)。
+>回顾一下，在梯度下降法中，当我们接近局部最低点时，梯度下降法会自动采取更小的幅度，这是因为当我们接近局部最低点时，
+>很显然在局部最低时导数等于零，所以当我们接近局部最低时，导数值会自动变得越来越小，所以梯度下降将自动采取较小的幅度，
+>这就是梯度下降的做法。所以实际上没有必要再另外减小α
 >```
 
 **这就是梯度下降算法，你可以用它来最小化任何代价函数**
 
-#### 梯度下降的线性回归
+#### 4.2 梯度下降的线性回归
 
