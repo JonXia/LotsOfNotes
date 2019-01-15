@@ -14,7 +14,7 @@
 [W,s,v] = svd((repmat(sum(x.*x,1),size(x,1),1).*x)*x');
 ```
 
-### 2. 单变量线性回归(Linear Regression with One Variable)
+## 2. 单变量线性回归(Linear Regression with One Variable)
 
 房价例子（监督学习/回归问题）：给定正确的俄勒冈州波特兰市的住房价格数据集，预测Size条件下房价Price的值；看图：
 
@@ -49,14 +49,14 @@
 
 ![](http://www.ai-start.com/ml2014/images/10ba90df2ada721cf1850ab668204dc9.png)
 
-我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化掉，![h_{\theta }(x)=\theta _{1}x](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)=\theta&space;_{1}x)，代价函数在![\theta==1](https://latex.codecogs.com/gif.latex?\theta=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，即h正确拟合，左边的函数曲线（直线）对应了所有的数据，
+我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化掉，![h_{\theta }(x)=\theta _{1}x](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)=\theta&space;_{1}x)，代价函数在![\theta==1](https://latex.codecogs.com/gif.latex?\theta=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，即h正确拟合，左边这条函数曲线（直线）对应了所有的数据
 
 ![](http://www.ai-start.com/ml2014/images/2c9fe871ca411ba557e65ac15d55745d.png)
-### 3. 轮廓图（等高线图）
+## 3. 轮廓图（等高线图）
 
 略
 
-### 4. 梯度下降
+## 4. 梯度下降
 
 梯度下降是很常用的解决线性回归，最小化函数的方式；我们在这里使用梯度下降算法求代价函数的![](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)最小值。
 
@@ -74,7 +74,7 @@
 - 在批量梯度下降中，我们每一次都会让所有的参数同时变化（即所有的参数减去学习速率乘以代价函数的导数）
 - ![\alpha \frac{\partial }{\partial \theta _{0} }J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta%20_%7B0%7D%20%7DJ%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)和![\alpha \frac{\partial }{\partial \theta _{1} }J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta%20_%7B1%7D%20%7DJ%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)其实是微分项
 
-#### 4.1 梯度下降的直观理解
+### 4.1 梯度下降的直观理解
 
 举例，我们的梯度下降算法如下：
 
@@ -114,5 +114,5 @@
 
 **这就是梯度下降算法，你可以用它来最小化任何代价函数**
 
-#### 4.2 梯度下降的线性回归
+### 4.2 梯度下降的线性回归
 
