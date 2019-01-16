@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="feat&amp;fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正&#10;2.增加图片">
+    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" afterDir="false" />
     </list>
@@ -47,7 +47,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="537">
-                <caret line="121" selection-start-line="121" selection-end-line="121" />
+                <caret line="138" column="13" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -62,6 +62,8 @@
     <findStrings>
       <find>Theta</find>
       <find>阿尔法</find>
+      <find>训练集</find>
+      <find>*</find>
     </findStrings>
     <replaceStrings>
       <replace>theta</replace>
@@ -82,6 +84,7 @@
         <option value="$PROJECT_DIR$/心得/19.1.11.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/心得/随便写的.md" />
+        <option value="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/README.md" />
         <option value="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" />
       </list>
     </option>
@@ -112,17 +115,6 @@
             <path>
               <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
               <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
-              <item name="数据库" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
-              <item name="数据库" type="462c0819:PsiDirectoryNode" />
-              <item name="MySql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
@@ -239,7 +231,7 @@
       <workItem from="1547427432146" duration="11766000" />
       <workItem from="1547450935528" duration="28775000" />
       <workItem from="1547558234692" duration="2052000" />
-      <workItem from="1547599811477" duration="707000" />
+      <workItem from="1547599811477" duration="5883000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -472,17 +464,31 @@
       <option name="project" value="LOCAL" />
       <updated>1547544953525</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正">
+      <created>1547600644832</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1547600644832</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat:location 吴恩达MachineLearning/week1&#10;1.增加梯度下降算法推导过程">
+      <created>1547607376533</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1547607376533</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63320000" />
+    <option name="totallyTimeSpent" value="68496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18900804" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18900804" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -582,7 +588,9 @@
     <MESSAGE value="fix:location 吴恩达MachineLearning&#10;1.图片大小调整" />
     <MESSAGE value="fix:location 吴恩达MachineLearning/week1&#10;1. 格式，勘误修正" />
     <MESSAGE value="feat&amp;fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正&#10;2.增加图片" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat&amp;fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正&#10;2.增加图片" />
+    <MESSAGE value="fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正" />
+    <MESSAGE value="feat:location 吴恩达MachineLearning/week1&#10;1.增加梯度下降算法推导过程" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:location 吴恩达MachineLearning/week1&#10;1.增加梯度下降算法推导过程" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringBoot.md">
@@ -643,6 +651,18 @@
       </provider>
       <provider editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="7" selection-start-column="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -659,7 +679,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="537">
-            <caret line="121" selection-start-line="121" selection-end-line="121" />
+            <caret line="138" column="13" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

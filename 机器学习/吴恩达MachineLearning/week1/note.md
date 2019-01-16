@@ -1,4 +1,4 @@
-## 1. Introduction
+# 1. Introduction
 目前存在集中不同的机器学习算法，大概可以分为两种，一种是监督学习，另一种是无监督学习。
 - 监督学习：给定已有正确的数据集，运用这些样本学习算法，算出更正确的结果。
     - 回归问题：算法的输出为连续的值，即定量输出
@@ -14,7 +14,7 @@
 [W,s,v] = svd((repmat(sum(x.*x,1),size(x,1),1).*x)*x');
 ```
 
-## 2. 单变量线性回归(Linear Regression with One Variable)
+# 2. 单变量线性回归(Linear Regression with One Variable)
 
 房价例子（监督学习/回归问题）：给定正确的俄勒冈州波特兰市的住房价格数据集，预测Size条件下房价Price的值；看图：
 
@@ -52,11 +52,11 @@
 我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化掉得到![h_{\theta }(x)=\theta _{1}x](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)=\theta&space;_{1}x)，代价函数在![\theta==1](https://latex.codecogs.com/gif.latex?\theta=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，即h正确拟合，左边这条函数曲线（直线）对应了所有的数据
 
 ![](http://www.ai-start.com/ml2014/images/2c9fe871ca411ba557e65ac15d55745d.png)
-## 3. 轮廓图（等高线图）
+# 3. 轮廓图（等高线图）
 
 略
 
-## 4. 梯度下降
+# 4. 梯度下降(Gradient Descent)
 
 梯度下降是很常用的最小化函数的方式；我们在这里使用梯度下降算法求代价函数的![](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)最小值。
 
@@ -66,7 +66,7 @@
 
 ![](http://www.ai-start.com/ml2014/images/db48c81304317847870d486ba5bb2015.jpg)
 
-**批量梯度下降（batch gradient descent）**算法的公式为：
+**批量**梯度下降（batch gradient descent）算法的公式为：
 
 ![](http://www.ai-start.com/ml2014/images/7da5a5f635b1eb552618556f1b4aac1a.png)
 
@@ -74,7 +74,7 @@
 - 在批量梯度下降中，我们每一次都会让所有的参数同时变化（即所有的参数减去学习速率乘以代价函数的导数）
 - ![\alpha \frac{\partial }{\partial \theta _{0} }J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta%20_%7B0%7D%20%7DJ%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)和![\alpha \frac{\partial }{\partial \theta _{1} }J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta%20_%7B1%7D%20%7DJ%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)其实是微分项
 
-### 4.1 梯度下降的直观理解
+## 4.1 梯度下降的直观理解
 
 举例，我们的梯度下降算法如下：
 
@@ -108,7 +108,7 @@
 
 **这就是梯度下降算法，你可以用它来最小化任何代价函数**
 
-### 4.2 梯度下降的线性回归
+## 4.2 梯度下降的线性回归
 我们谈到关于梯度下降算法，梯度下降是很常用的算法，它不仅被用在线性回归上和线性回归模型、平方误差代价函数。这部分内容，我们要将梯度下降和代价函数结合。我们将用到此算法，并将其应用于具体的拟合直线的线性回归算法里。
 
 
@@ -122,7 +122,7 @@
 
 ![j=1](https://latex.codecogs.com/gif.latex?j=1)时：![\frac {\partial }{\partial \theta_{1}}J(\theta_{0},\theta_{1})=\frac {1}{m}\sum_{i=1}^{m}((h_{\theta}(x^{(i)})-y^{(i)})\cdot x^{(i)})](https://latex.codecogs.com/gif.latex?\frac&space;{\partial&space;}{\partial&space;\theta_{1}}J(\theta_{0},\theta_{1})=\frac&space;{1}{m}\sum_{i=1}^{m}((h_{\theta}(x^{(i)})-y^{(i)})\cdot&space;x^{(i)}))
 
-应用梯度下降算法则改写成这样：
+应用梯度下降算法把上式改写成这样：
 
 Repeat {
 
@@ -132,3 +132,8 @@ Repeat {
 
 }
 
+这个算法叫做批量梯度下降，意思是指，在梯度下降算法的过程中，用到了所有的训练样本，即在公式中，每一次求导都要对结果求和，求了m次。
+
+但在线性代数中，有一种计算代价函数最小值的方法，它可以在不需要多步梯度下降的情况下，也能解出代价函数的最小值，这是另一种称为**正规方程**(normal equations)的方法。实际上在数据量较大的情况下，梯度下降法比正规方程要更适用一些。
+
+# 5. 线性代数回顾（Linear Algebra）
