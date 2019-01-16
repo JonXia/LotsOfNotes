@@ -52,11 +52,11 @@
 我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化掉得到![h_{\theta }(x)=\theta _{1}x](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)=\theta&space;_{1}x)，代价函数在![\theta==1](https://latex.codecogs.com/gif.latex?\theta=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，即h正确拟合，左边这条函数曲线（直线）对应了所有的数据
 
 ![](http://www.ai-start.com/ml2014/images/2c9fe871ca411ba557e65ac15d55745d.png)
-# 3. 轮廓图（等高线图）
+## 2.1 轮廓图（等高线图）
 
 略
 
-# 4. 梯度下降(Gradient Descent)
+## 2.2 梯度下降(Gradient Descent)
 
 梯度下降是很常用的最小化函数的方式；我们在这里使用梯度下降算法求代价函数的![](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)最小值。
 
@@ -74,7 +74,7 @@
 - 在批量梯度下降中，我们每一次都会让所有的参数同时变化（即所有的参数减去学习速率乘以代价函数的导数）
 - ![\alpha \frac{\partial }{\partial \theta _{0} }J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta%20_%7B0%7D%20%7DJ%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)和![\alpha \frac{\partial }{\partial \theta _{1} }J(\theta _{0},\theta _{1})](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta%20_%7B1%7D%20%7DJ%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)其实是微分项
 
-## 4.1 梯度下降的直观理解
+### 2.2.1 梯度下降的直观理解
 
 举例，我们的梯度下降算法如下：
 
@@ -108,11 +108,12 @@
 
 **这就是梯度下降算法，你可以用它来最小化任何代价函数**
 
-## 4.2 梯度下降的线性回归
+### 2.2.2 梯度下降的线性回归
 我们谈到关于梯度下降算法，梯度下降是很常用的算法，它不仅被用在线性回归上和线性回归模型、平方误差代价函数。这部分内容，我们要将梯度下降和代价函数结合。我们将用到此算法，并将其应用于具体的拟合直线的线性回归算法里。
 
 
 梯度下降算法和线性回归算法比较如图：
+
 ![](http://www.ai-start.com/ml2014/images/5eb364cc5732428c695e2aa90138b01b.png)
 
 对我们之前的线性回归问题运用梯度下降法，关键在于求出代价函数的导数，即：
@@ -136,4 +137,56 @@ Repeat {
 
 但在线性代数中，有一种计算代价函数最小值的方法，它可以在不需要多步梯度下降的情况下，也能解出代价函数的最小值，这是另一种称为**正规方程**(normal equations)的方法。实际上在数据量较大的情况下，梯度下降法比正规方程要更适用一些。
 
-# 5. 线性代数回顾（Linear Algebra）
+# 3. 线性代数回顾（Linear Algebra）
+
+- 矩阵和向量定义
+
+略
+
+- 加法和矩阵标量乘法
+
+行列相等的可以加，其他略
+
+- 矩阵向量乘法
+
+矩阵乘法：
+
+![m\timesn](https://latex.codecogs.com/gif.latex?m\times&space;n)矩阵乘以![n\timeso](https://latex.codecogs.com/gif.latex?n\times&space;o)矩阵，变成![m\timeso](https://latex.codecogs.com/gif.latex?m\times&space;o)矩阵。
+
+比如：
+
+![](http://www.ai-start.com/ml2014/images/1a9f98df1560724713f6580de27a0bde.jpg)
+![](http://www.ai-start.com/ml2014/images/5ec35206e8ae22668d4b4a3c3ea7b292.jpg)
+
+矩阵乘法的性质：
+
+矩阵的乘法不满足交换律：![A\times B\neq B\times A](https://latex.codecogs.com/gif.latex?A\times&space;B\neq&space;B\times&space;A)
+
+矩阵的乘法满足结合律。即：![A\times (B \times C)=(A\times B) \times C](https://latex.codecogs.com/gif.latex?A\times&space;(B&space;\times&space;C)=(A\times&space;B)&space;\times&space;C)
+
+单位矩阵：在矩阵的乘法中，有一种矩阵起着特殊的作用，如同数的乘法中的1,我们称这种矩阵为单位矩阵．它是个方阵，一般用![I](https://latex.codecogs.com/gif.latex?I)或者![E](https://latex.codecogs.com/gif.latex?E)表示；单位矩阵从左上角到右下角的对角线（称为主对角线）上的元素均为1以外全都为0。如：![A{{A}^{-1}}={{A}^{-1}}A=I](https://latex.codecogs.com/gif.latex?A{{A}^{-1}}={{A}^{-1}}A=I)
+
+对于单位矩阵有下式![](https://latex.codecogs.com/gif.latex?AI=IA=A)
+
+- 逆、转置（Inverse and Transpose）
+
+矩阵的逆：如矩阵![A](https://latex.codecogs.com/gif.latex?A)是一个![](https://latex.codecogs.com/gif.latex?m\times&space;n)的矩阵，对于它的逆矩阵有，![A{{A}^{-1}}={{A}^{-1}}A=I](https://latex.codecogs.com/gif.latex?A{{A}^{-1}}={{A}^{-1}}A=I)
+
+矩阵的转置：设![A](https://latex.codecogs.com/gif.latex?A)为![](https://latex.codecogs.com/gif.latex?m\times&space;n)阶矩阵（即![m](https://latex.codecogs.com/gif.latex?m)行![n](https://latex.codecogs.com/gif.latex?n)列），第![i](https://latex.codecogs.com/gif.latex?i)行![j](https://latex.codecogs.com/gif.latex?j)列的元素是![a(i,j)](https://latex.codecogs.com/gif.latex?a(i,j))，即：![A=a(i,j)](https://latex.codecogs.com/gif.latex?A=a(i,j))
+
+定义![A](https://latex.codecogs.com/gif.latex?A)的转置为这样一个![](https://latex.codecogs.com/gif.latex?n\times&space;m)阶矩阵![B](https://latex.codecogs.com/gif.latex?B)，满足![B=a(j,i)](https://latex.codecogs.com/gif.latex?B=a(j,i))，即![b (i,j)=a(j,i)](https://latex.codecogs.com/gif.latex?b&space;(i,j)=a(j,i)),记![{{A}^{T}}=B](https://latex.codecogs.com/gif.latex?{{A}^{T}}=B)。（有些书记为A'=B）
+
+例：
+
+![](https://latex.codecogs.com/gif.latex?${{\left|&space;\begin{matrix}&space;a&&space;b&space;\\&space;c&&space;d&space;\\&space;e&&space;f&space;\\\end{matrix}&space;\right|}^{T}}=\left|\begin{matrix}&space;a&&space;c&space;&&space;e&space;\\&space;b&&space;d&space;&&space;f&space;\\\end{matrix}&space;\right|$)
+
+矩阵的转置基本性质：
+
+![{{\left( A\pm B \right)}^{T}}={{A}^{T}}\pm {{B}^{T}}](https://latex.codecogs.com/gif.latex?{{\left(&space;A\pm&space;B&space;\right)}^{T}}={{A}^{T}}\pm&space;{{B}^{T}})
+
+![{{\left( A\times B \right)}^{T}}={{B}^{T}}\times {{A}^{T}}](https://latex.codecogs.com/gif.latex?{{\left(&space;A\times&space;B&space;\right)}^{T}}={{B}^{T}}\times&space;{{A}^{T}})
+
+![{{\left( {{A}^{T}} \right)}^{T}}=A](https://latex.codecogs.com/gif.latex?{{\left(&space;{{A}^{T}}&space;\right)}^{T}}=A)
+
+![{{\left( KA \right)}^{T}}=K{{A}^{T}} ](https://latex.codecogs.com/gif.latex?{{\left(&space;KA&space;\right)}^{T}}=K{{A}^{T}})
+
