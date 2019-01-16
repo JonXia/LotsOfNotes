@@ -20,7 +20,7 @@
 
 ![](http://www.ai-start.com/ml2014/images/8e76e65ca7098b74a2e9bc8e9577adfc.png)
 
-这个回归问题的训练集如图所示：
+这个回归问题的数据集如图所示：
 
 ![](http://www.ai-start.com/ml2014/images/44c68412e65e62686a96ad16f278571f.png)
 
@@ -49,7 +49,7 @@
 
 ![](http://www.ai-start.com/ml2014/images/10ba90df2ada721cf1850ab668204dc9.png)
 
-我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化掉，![h_{\theta }(x)=\theta _{1}x](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)=\theta&space;_{1}x)，代价函数在![\theta==1](https://latex.codecogs.com/gif.latex?\theta=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，即h正确拟合，左边这条函数曲线（直线）对应了所有的数据
+我们将![\theta _{0 }](https://latex.codecogs.com/gif.latex?\theta&space;_{0&space;})简化掉得到![h_{\theta }(x)=\theta _{1}x](https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)=\theta&space;_{1}x)，代价函数在![\theta==1](https://latex.codecogs.com/gif.latex?\theta=1)时，![J(\theta _{1})=0](https://latex.codecogs.com/gif.latex?J(\theta&space;_{1})=0)，即h正确拟合，左边这条函数曲线（直线）对应了所有的数据
 
 ![](http://www.ai-start.com/ml2014/images/2c9fe871ca411ba557e65ac15d55745d.png)
 ## 3. 轮廓图（等高线图）
@@ -58,7 +58,7 @@
 
 ## 4. 梯度下降
 
-梯度下降是很常用的解决线性回归，最小化函数的方式；我们在这里使用梯度下降算法求代价函数的![](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)最小值。
+梯度下降是很常用的最小化函数的方式；我们在这里使用梯度下降算法求代价函数的![](https://latex.codecogs.com/gif.latex?J%28%5Ctheta%20_%7B0%7D%2C%5Ctheta%20_%7B1%7D%29)最小值。
 
 梯度下降的思想是，给定一系列θ值，然后我们找到一个能让代价函数下降最多的值的集合，然后重复这个步骤知道找到局部的最小值（local minimum），但是我们没有尝试完所有的组合，所以这个最小值不是全局最小值（global minimum）
 
@@ -102,20 +102,33 @@
 
 那么，在梯度下降的过程中，式子是怎么变化的呢？
 
-举一个例子，如图代价函数![J(θ)](https://latex.codecogs.com/gif.latex?J(\theta))，我们要找到它的最小值，首先初始化我们的梯度下降算法，可以看出导数项对应的斜率是蛮陡的，但是当迭代多次之后，导数项会越来越小，我的步子自然会越来越小，这时候就自然而然的收敛到最小值了。
+举一个例子，如图代价函数![J(θ)](https://latex.codecogs.com/gif.latex?J(\theta))，我们要找到它的最小值，首先初始化我们的梯度下降算法，可以看出导数项对应的斜率是蛮陡的，但是当迭代多次之后，我们接近局部最低时，导数值会自动变得越来越小，所以梯度下降将自动采取较小的幅度，这就是梯度下降的做法。所以实际上没有必要再另外减小α
 
 ![](pics/αtozero.png)
-
->```
->回顾一下，在梯度下降法中，当我们接近局部最低点时，梯度下降法会自动采取更小的幅度，这是因为当我们接近局部最低点时，
->很显然在局部最低时导数等于零，所以当我们接近局部最低时，导数值会自动变得越来越小，所以梯度下降将自动采取较小的幅度，
->这就是梯度下降的做法。所以实际上没有必要再另外减小α
->```
 
 **这就是梯度下降算法，你可以用它来最小化任何代价函数**
 
 ### 4.2 梯度下降的线性回归
->```
->在以前的视频中我们谈到关于梯度下降算法，梯度下降是很常用的算法，它不仅被用在线性回归上和线性回归模型、平方误差代价函数。
->在这段视频中，我们要将梯度下降和代价函数结合。我们将用到此算法，并将其应用于具体的拟合直线的线性回归算法里。
->```
+我们谈到关于梯度下降算法，梯度下降是很常用的算法，它不仅被用在线性回归上和线性回归模型、平方误差代价函数。这部分内容，我们要将梯度下降和代价函数结合。我们将用到此算法，并将其应用于具体的拟合直线的线性回归算法里。
+
+
+梯度下降算法和线性回归算法比较如图：
+![](http://www.ai-start.com/ml2014/images/5eb364cc5732428c695e2aa90138b01b.png)
+
+对我们之前的线性回归问题运用梯度下降法，关键在于求出代价函数的导数，即：
+![\frac {\partial }{\partial \theta_{j}}J(\theta_{0},\theta_{1})=\frac {\partial }{\partial \theta_{j}}  \frac {1}{2m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^{2}](https://latex.codecogs.com/gif.latex?\frac&space;{\partial&space;}{\partial&space;\theta_{j}}J(\theta_{0},\theta_{1})=\frac&space;{\partial&space;}{\partial&space;\theta_{j}}&space;\frac&space;{1}{2m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^{2})
+
+![j=0](https://latex.codecogs.com/gif.latex?j=0)时：![\frac {\partial }{\partial \theta_{0}}J(\theta_{0},\theta_{1})=\frac {1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})](https://latex.codecogs.com/gif.latex?\frac&space;{\partial&space;}{\partial&space;\theta_{0}}J(\theta_{0},\theta_{1})=\frac&space;{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)}))
+
+![j=1](https://latex.codecogs.com/gif.latex?j=1)时：![\frac {\partial }{\partial \theta_{1}}J(\theta_{0},\theta_{1})=\frac {1}{m}\sum_{i=1}^{m}((h_{\theta}(x^{(i)})-y^{(i)})\cdot x^{(i)})](https://latex.codecogs.com/gif.latex?\frac&space;{\partial&space;}{\partial&space;\theta_{1}}J(\theta_{0},\theta_{1})=\frac&space;{1}{m}\sum_{i=1}^{m}((h_{\theta}(x^{(i)})-y^{(i)})\cdot&space;x^{(i)}))
+
+应用梯度下降算法则改写成这样：
+
+Repeat {
+
+![\theta _{0}:=\theta _{0}-\alpha \frac {1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})](https://latex.codecogs.com/gif.latex?\theta&space;_{0}:=\theta&space;_{0}-\alpha&space;\frac&space;{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)}))
+
+![\theta _{0}:=\theta _{0}-\alpha \frac {1}{m}\sum_{i=1}^{m}((h_{\theta}(x^{(i)})-y^{(i)})\cdot x^{(i)})](https://latex.codecogs.com/gif.latex?\theta&space;_{0}:=\theta&space;_{0}-\alpha&space;\frac&space;{1}{m}\sum_{i=1}^{m}((h_{\theta}(x^{(i)})-y^{(i)})\cdot&space;x^{(i)}))
+
+}
+
