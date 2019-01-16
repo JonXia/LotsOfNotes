@@ -20,7 +20,7 @@
 
 ![](http://www.ai-start.com/ml2014/images/8e76e65ca7098b74a2e9bc8e9577adfc.png)
 
-假如这个回归问题的训练集如图所示：
+这个回归问题的训练集如图所示：
 
 ![](http://www.ai-start.com/ml2014/images/44c68412e65e62686a96ad16f278571f.png)
 
@@ -78,9 +78,9 @@
 
 举例，我们的梯度下降算法如下：
 
-![\theta _ {j} :=\theta _ {j}-\alpha \frac{\partial }{\partial \theta _{j}}J(\theta)](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{j}&space;:=\theta&space;_&space;{j}-\alpha&space;\frac{\partial&space;}{\partial&space;\theta&space;_{j}}J(\theta&space;_{j})))
+![\theta _ {j} :=\theta _ {j}-\alpha \frac{\partial }{\partial \theta _{j}}J(\theta)](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{j}&space;:=\theta&space;_&space;{j}-\alpha&space;\frac{\partial&space;}{\partial&space;\theta&space;_{j}}J(\theta&space;_{j}))
 
-描述：对θ赋值，使得按梯度下降最快方向进行，一直迭代下去，最终得到局部最小值。其中α是学习率（learning rate），它决定了我们沿着能让代价函数下降程度最大的方向向下迈出的步子有多大。
+描述：对![西塔](https://latex.codecogs.com/gif.latex?\theta)赋值，使得按梯度下降最快方向进行，一直迭代下去，最终得到局部最小值。其中![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)是学习率（learning rate），它决定了我们沿着能让代价函数下降程度最大的方向向下迈出的步子有多大。
 
 对于这个问题，变成了求下图红色斜线的斜率，也就是那条红色的切线，当我们娶到如图中的切点时，我们求导得到了正斜率，这个式子就变成了![](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1}&space;:=\theta&space;_&space;{1}-\alpha&space;\frac{\partial&space;}{\partial&space;\theta&space;_{1}}J(\theta&space;_{1}))
 通过它，我们得到了一个新的![西塔1](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})，这个![](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})等于![](https://latex.codecogs.com/gif.latex?\theta&space;_&space;{1})减去一个正数的斜率乘以![阿尔法](https://latex.codecogs.com/gif.latex?\alpha)
@@ -115,4 +115,7 @@
 **这就是梯度下降算法，你可以用它来最小化任何代价函数**
 
 ### 4.2 梯度下降的线性回归
-
+>```
+>在以前的视频中我们谈到关于梯度下降算法，梯度下降是很常用的算法，它不仅被用在线性回归上和线性回归模型、平方误差代价函数。
+>在这段视频中，我们要将梯度下降和代价函数结合。我们将用到此算法，并将其应用于具体的拟合直线的线性回归算法里。
+>```

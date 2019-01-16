@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="fix:location 吴恩达MachineLearning&#10;1.图片大小调整">
+    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="feat&amp;fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正&#10;2.增加图片">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/心得/随便写的.md" beforeDir="false" afterPath="$PROJECT_DIR$/心得/随便写的.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,8 +46,8 @@
         <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="153">
-                <caret line="51" column="342" lean-forward="true" selection-start-line="51" selection-start-column="342" selection-end-line="51" selection-end-column="342" />
+              <first_editor relative-caret-position="537">
+                <caret line="121" selection-start-line="121" selection-end-line="121" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -96,9 +95,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="220" />
-    <option name="y" value="141" />
+    <option name="y" value="140" />
     <option name="width" value="1670" />
-    <option name="height" value="909" />
+    <option name="height" value="910" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -106,6 +105,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,7 +116,13 @@
             <path>
               <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
               <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
-              <item name="心得" type="462c0819:PsiDirectoryNode" />
+              <item name="数据库" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
+              <item name="数据库" type="462c0819:PsiDirectoryNode" />
+              <item name="MySql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
@@ -140,7 +146,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -232,7 +237,9 @@
       <workItem from="1547169183352" duration="6303000" />
       <workItem from="1547342024248" duration="826000" />
       <workItem from="1547427432146" duration="11766000" />
-      <workItem from="1547450935528" duration="26564000" />
+      <workItem from="1547450935528" duration="28775000" />
+      <workItem from="1547558234692" duration="2052000" />
+      <workItem from="1547599811477" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -451,17 +458,31 @@
       <option name="project" value="LOCAL" />
       <updated>1547540014808</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix:location 吴恩达MachineLearning/week1&#10;1. 格式，勘误修正">
+      <created>1547544583842</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1547544583842</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat&amp;fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正&#10;2.增加图片">
+      <created>1547544953525</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1547544953525</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58350000" />
+    <option name="totallyTimeSpent" value="63320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18364611" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18900804" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -469,7 +490,6 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Sudoku" order="6" />
       <window_info id="Learn" order="7" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -485,6 +505,7 @@
       <window_info anchor="bottom" id="JRebel Executor" order="12" />
       <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="15" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -559,7 +580,9 @@
     <MESSAGE value="feat:location 吴恩达MachineLearning&#10;1.修改图片格式" />
     <MESSAGE value="feat:location 吴恩达MachineLearning&#10;1.梯度下降完成" />
     <MESSAGE value="fix:location 吴恩达MachineLearning&#10;1.图片大小调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix:location 吴恩达MachineLearning&#10;1.图片大小调整" />
+    <MESSAGE value="fix:location 吴恩达MachineLearning/week1&#10;1. 格式，勘误修正" />
+    <MESSAGE value="feat&amp;fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正&#10;2.增加图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat&amp;fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正&#10;2.增加图片" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringBoot.md">
@@ -592,6 +615,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/心得/19.1.11.md" />
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/pics/αtoolarge.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/心得/随便写的.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/重新定义SpringCloud实战/第一章/第一章 微服务与SpringCloud.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -617,26 +655,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/pics/αtoolarge.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/心得/随便写的.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="153">
-            <caret line="51" column="342" lean-forward="true" selection-start-line="51" selection-start-column="342" selection-end-line="51" selection-end-column="342" />
+          <first_editor relative-caret-position="537">
+            <caret line="121" selection-start-line="121" selection-end-line="121" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
