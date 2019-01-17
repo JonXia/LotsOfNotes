@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="feat:location 吴恩达MachineLearning/week1&#10;1.批量梯度下降完结">
-      <change afterPath="$PROJECT_DIR$/linux服务器/linux的定时任务crontab.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md" afterDir="false" />
+    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="feat&amp;fix:location 吴恩达MachineLearning/week1 &amp; linux服务器&#10;1.机器学习排版修正，增加week2&#10;2.云服务器改为linux服务器，增加新文章crontab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/云服务器/Linux下Access denied for user ‘root’@‘localhost’的解决方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/linux服务器/Linux下Access denied for user ‘root’@‘localhost’的解决方法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/云服务器/Mysql安装配置卸载.md" beforeDir="false" afterPath="$PROJECT_DIR$/linux服务器/Mysql安装配置卸载.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/云服务器/Navicat连接数据库1130.md" beforeDir="false" afterPath="$PROJECT_DIR$/linux服务器/Navicat连接数据库1130.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/云服务器/Nginx配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/linux服务器/Nginx配置.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux服务器/linux的定时任务crontab.md" beforeDir="false" afterPath="$PROJECT_DIR$/linux服务器/linux的定时任务crontab.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="538">
+              <first_editor relative-caret-position="3648">
                 <caret line="192" selection-start-line="192" selection-end-line="192" />
               </first_editor>
               <second_editor>
@@ -53,8 +46,8 @@
         <entry file="file://$PROJECT_DIR$/linux服务器/linux的定时任务crontab.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="442">
-                <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+              <first_editor relative-caret-position="399">
+                <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -119,7 +112,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,7 +154,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,7 +249,8 @@
       <workItem from="1547558234692" duration="2052000" />
       <workItem from="1547599811477" duration="12108000" />
       <workItem from="1547620628842" duration="1406000" />
-      <workItem from="1547653819638" duration="287000" />
+      <workItem from="1547653819638" duration="399000" />
+      <workItem from="1547711535921" duration="229000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -510,17 +504,24 @@
       <option name="project" value="LOCAL" />
       <updated>1547608164209</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="feat&amp;fix:location 吴恩达MachineLearning/week1 &amp; linux服务器&#10;1.机器学习排版修正，增加week2&#10;2.云服务器改为linux服务器，增加新文章crontab">
+      <created>1547654226009</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1547654226010</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76414000" />
+    <option name="totallyTimeSpent" value="76755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19436997" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19705094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -623,7 +624,8 @@
     <MESSAGE value="fix:location 吴恩达MachineLearning/week1&#10;1.格式，勘误修正" />
     <MESSAGE value="feat:location 吴恩达MachineLearning/week1&#10;1.增加梯度下降算法推导过程" />
     <MESSAGE value="feat:location 吴恩达MachineLearning/week1&#10;1.批量梯度下降完结" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:location 吴恩达MachineLearning/week1&#10;1.批量梯度下降完结" />
+    <MESSAGE value="feat&amp;fix:location 吴恩达MachineLearning/week1 &amp; linux服务器&#10;1.机器学习排版修正，增加week2&#10;2.云服务器改为linux服务器，增加新文章crontab" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat&amp;fix:location 吴恩达MachineLearning/week1 &amp; linux服务器&#10;1.机器学习排版修正，增加week2&#10;2.云服务器改为linux服务器，增加新文章crontab" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringBoot.md">
@@ -685,7 +687,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/重新定义SpringCloud实战/第一章/第一章 微服务与SpringCloud.md">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="57">
@@ -696,6 +697,7 @@
           </second_editor>
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
@@ -712,7 +714,7 @@
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="538">
+          <first_editor relative-caret-position="3648">
             <caret line="192" selection-start-line="192" selection-end-line="192" />
           </first_editor>
           <second_editor>
@@ -724,8 +726,8 @@
     <entry file="file://$PROJECT_DIR$/linux服务器/linux的定时任务crontab.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="442">
-            <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+          <first_editor relative-caret-position="399">
+            <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

@@ -25,6 +25,7 @@ chkconfig –level 35 crond on
 # crontab -e
 00 * * * * /usr/local/bin/php /home/john/myscript.php
 ```
+注意：你的脚本文件的执行权限
 如果你的PHP脚本可以通过URL触发，你可以使用lynx或curl或wget来配置你的Crontab。
 下面的例子是使用Lynx文本浏览器访问URL来每小时执行PHP脚本。Lynx文本浏览器默认使用对话方式打开URL。但是，像下面的，我们在lynx命令行中使用-dump选项来把URL的输出转换来标准输出。
 
@@ -90,4 +91,5 @@ crontab文件的一些例子：
 0 11 4 * mon-wed /usr/local/etc/rc.d/lighttpd restart
 每月的4号与每周一到周三的11点重启apache
 0 4 1 jan * /usr/local/etc/rc.d/lighttpd restart
+*/1 * * * * /usr/local/php7/bin/php -f /usr/local/nginx/html/includes/kdp_user_to_oes_oes_user_amount.php 每分钟执行一次php脚本
 ```
