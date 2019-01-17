@@ -178,7 +178,7 @@ Repeat {
 
 例：
 
-![](https://latex.codecogs.com/gif.latex?${{\left|&space;\begin{matrix}&space;a&&space;b&space;\\&space;c&&space;d&space;\\&space;e&&space;f&space;\\\end{matrix}&space;\right|}^{T}}=\left|\begin{matrix}&space;a&&space;c&space;&&space;e&space;\\&space;b&&space;d&space;&&space;f&space;\\\end{matrix}&space;\right|$)
+![](https://latex.codecogs.com/gif.latex?%7B%7B%5Cleft%7C%20%5Cbegin%7Bmatrix%7D%20a%26%20b%20%5C%5C%20c%26%20d%20%5C%5C%20e%26%20f%20%5C%5C%5Cend%7Bmatrix%7D%20%5Cright%7C%7D%5E%7BT%7D%7D%3D%5Cleft%7C%5Cbegin%7Bmatrix%7D%20a%26%20c%20%26%20e%20%5C%5C%20b%26%20d%20%26%20f%20%5C%5C%5Cend%7Bmatrix%7D%20%5Cright%7C)
 
 矩阵的转置基本性质：
 
