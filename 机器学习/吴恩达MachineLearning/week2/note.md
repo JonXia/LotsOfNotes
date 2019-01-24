@@ -5,7 +5,7 @@
 
 话不多说一图流：
 
-<img width=500  src="pics/indicate_multiplefeatures2.png">
+<img width=500  src="pics/indicate_multiplefeatures.png">
 
 - n为特征的数量
 - ![](https://latex.codecogs.com/gif.latex?{x^{\left(&space;i&space;\right)}})代表第 ![i](https://latex.codecogs.com/gif.latex?i) 个训练实例，是特征矩阵中的第![i](https://latex.codecogs.com/gif.latex?i)行，是一个**向量**（**vector**）。
@@ -24,3 +24,4 @@
 <img width=500  src="pics/indicate_multiplefeatures2.png">
 
 ##  2.2 多变量梯度下降
+
