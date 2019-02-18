@@ -112,3 +112,47 @@
 
 那么我们最小化这个二次函数的方法是对它求导，令导数=0之后求出的就是令J(θ)最小的θ值。
 
+**推导过程**
+![\theta ={{\left( {X^{T}}X \right)}^{-1}}{X^{T}}y](https://latex.codecogs.com/gif.latex?\theta&space;={{\left(&space;{X^{T}}X&space;\right)}^{-1}}{X^{T}}y) 的推导过程：
+
+![](https://latex.codecogs.com/gif.latex?J\left(&space;\theta&space;\right)=\frac{1}{2m}\sum\limits_{i=1}^{m}{{{\left(&space;{h_{\theta}}\left(&space;{x^{(i)}}&space;\right)-{y^{(i)}}&space;\right)}^{2}}})
+其中：![](https://latex.codecogs.com/gif.latex?{h_{\theta}}\left(&space;x&space;\right)={\theta^{T}}X={\theta_{0}}{x_{0}}&plus;{\theta_{1}}{x_{1}}&plus;{\theta_{2}}{x_{2}}&plus;...&plus;{\theta_{n}}{x_{n}})
+
+将向量表达形式转为矩阵表达形式，则有![](https://latex.codecogs.com/gif.latex?J(\theta&space;)=\frac{1}{2}{{\left(&space;X\theta&space;-y\right)}^{2}}) ，其中![](https://latex.codecogs.com/gif.latex?x)为![](https://latex.codecogs.com/gif.latex?m)行![](https://latex.codecogs.com/gif.latex?n)列的矩阵（![](https://latex.codecogs.com/gif.latex?m)为样本个数，![](https://latex.codecogs.com/gif.latex?n)为特征个数），![](https://latex.codecogs.com/gif.latex?\theta)为![](https://latex.codecogs.com/gif.latex?n)行1列的矩阵，![](https://latex.codecogs.com/gif.latex?y)为![](https://latex.codecogs.com/gif.latex?m)行1列的矩阵，对![](https://latex.codecogs.com/gif.latex?J(\theta))进行如下变换
+
+![](https://latex.codecogs.com/gif.latex?J(\theta&space;)=\frac{1}{2}{{\left(&space;X\theta&space;-y\right)}^{T}}\left(&space;X\theta&space;-y&space;\right))
+
+​     ![](https://latex.codecogs.com/gif.latex?=\frac{1}{2}\left(&space;{{\theta&space;}^{T}}{{X}^{T}}-{{y}^{T}}&space;\right)\left(X\theta&space;-y&space;\right))
+
+​     ![](https://latex.codecogs.com/gif.latex?=\frac{1}{2}\left(&space;{{\theta&space;}^{T}}{{X}^{T}}X\theta&space;-{{\theta}^{T}}{{X}^{T}}y-{{y}^{T}}X\theta&space;-{{y}^{T}}y&space;\right))
+
+接下来对![](https://latex.codecogs.com/gif.latex?J(\theta))偏导，需要用到以下几个矩阵的求导法则:
+
+![](https://latex.codecogs.com/gif.latex?\frac{dAB}{dB}={{A}^{T}})
+
+![](https://latex.codecogs.com/gif.latex?\frac{d{{X}^{T}}AX}{dX}=2AX)
+
+所以有:
+
+![](https://latex.codecogs.com/gif.latex?\frac{\partial&space;J\left(&space;\theta&space;\right)}{\partial&space;\theta&space;}=\frac{1}{2}\left(2{{X}^{T}}X\theta&space;-{{X}^{T}}y&space;-{}({{y}^{T}}X&space;)^{T}-0&space;\right))
+
+![](https://latex.codecogs.com/gif.latex?=\frac{1}{2}\left(2{{X}^{T}}X\theta&space;-{{X}^{T}}y&space;-{{X}^{T}}y&space;-0&space;\right))
+
+​           ![](https://latex.codecogs.com/gif.latex?={{X}^{T}}X\theta&space;-{{X}^{T}}y)
+
+令![](https://latex.codecogs.com/gif.latex?\frac{\partial&space;J\left(&space;\theta&space;\right)}{\partial&space;\theta&space;}=0),
+
+则有![](https://latex.codecogs.com/gif.latex?\theta&space;={{\left(&space;{X^{T}}X&space;\right)}^{-1}}{X^{T}}y)
+
+梯度下降与正规方程的比较：
+
+| 梯度下降             | 正规方程                                     |
+| ---------------- | ---------------------------------------- |
+| 需要选择学习率![](https://latex.codecogs.com/gif.latex?\alpha)  | 不需要                                      |
+| 需要多次迭代           | 一次运算得出                                   |
+| 当特征数量![](https://latex.codecogs.com/gif.latex?n)大时也能较好适用 | 需要计算![](https://latex.codecogs.com/gif.latex?{{\left(&space;{{X}^{T}}X&space;\right)}^{-1}}) 如果特征数量n较大则运算代价大，因为矩阵逆的计算时间复杂度为![](https://latex.codecogs.com/gif.latex?O\left(&space;{{n}^{3}}&space;\right))，通常来说当![](https://latex.codecogs.com/gif.latex?n)小于10000 时还是可以接受的 |
+| 适用于各种类型的模型       | 只适用于线性模型，不适合逻辑回归模型等其他模型                  |
+
+总结一下，只要特征变量的数目并不大，标准方程是一个很好的计算参数![](https://latex.codecogs.com/gif.latex?\theta)的替代方法。具体地说，只要特征变量数量小于一万，通常使用正规方程法，而不使用梯度下降法。
+
+随着我们要讲的学习算法越来越复杂，例如，当我们讲到分类算法，像逻辑回归算法，我们会看到，实际上对于那些算法，并不能使用标准方程法。

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="feat(location): 机器学习/吴恩达MachineLearning/week2&#10;&#10;1.week2补充图片等">
+    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="fix(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week1语义修正&#10;2.week2勘误修正">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week1/note.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -13,14 +12,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="133">
-                <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+              <first_editor relative-caret-position="528">
+                <caret line="157" selection-start-line="157" selection-end-line="157" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -30,13 +43,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/indicate_multiplefeatures2.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/indicate_multiplefeatures.png">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week3/note.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -121,14 +136,7 @@
               <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
               <item name="机器学习" type="462c0819:PsiDirectoryNode" />
               <item name="吴恩达MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="week1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LotsOfNotes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LotsOfNotes" type="462c0819:PsiDirectoryNode" />
-              <item name="机器学习" type="462c0819:PsiDirectoryNode" />
-              <item name="吴恩达MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="week2" type="462c0819:PsiDirectoryNode" />
+              <item name="week3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -243,7 +251,21 @@
       <workItem from="1548118638315" duration="786000" />
       <workItem from="1548119481099" duration="6130000" />
       <workItem from="1548147232078" duration="1015000" />
-      <workItem from="1548290767186" duration="1601000" />
+      <workItem from="1548290767186" duration="11550000" />
+      <workItem from="1548333420162" duration="6307000" />
+      <workItem from="1548380096204" duration="4227000" />
+      <workItem from="1548420904609" duration="604000" />
+      <workItem from="1548636373649" duration="630000" />
+      <workItem from="1548663794404" duration="1177000" />
+      <workItem from="1548722810912" duration="1763000" />
+      <workItem from="1548828233408" duration="2044000" />
+      <workItem from="1548984656942" duration="826000" />
+      <workItem from="1548986837775" duration="1143000" />
+      <workItem from="1549178922293" duration="595000" />
+      <workItem from="1549932714294" duration="1883000" />
+      <workItem from="1550021247626" duration="597000" />
+      <workItem from="1550112451283" duration="69000" />
+      <workItem from="1550480769243" duration="2236000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -532,17 +554,38 @@
       <option name="project" value="LOCAL" />
       <updated>1548041823525</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fix(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week1语义修正&#10;2.week2勘误修正">
+      <created>1548302289856</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1548302289856</updated>
+    </task>
+    <task id="LOCAL-00043" summary="feat(location): 机器学习/吴恩达MachineLearning/week2&#10;&#10;1.week2写到多项式回归">
+      <created>1548377974499</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1548377974499</updated>
+    </task>
+    <task id="LOCAL-00044" summary="feat(location): 机器学习/吴恩达MachineLearning/week2 week3&#10;&#10;1.week2增加正规方程&#10;2.week3增加逻辑回归">
+      <created>1548840499597</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1548840499597</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99164000" />
+    <option name="totallyTimeSpent" value="133214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26541555" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19571045" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -572,7 +615,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="Maven" order="7" />
@@ -636,9 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="新增 心得 分类" />
-    <MESSAGE value="更新" />
-    <MESSAGE value="Typora出毛病了，丢了好多笔记，只好从eureka重新写" />
     <MESSAGE value="Eureka更新" />
     <MESSAGE value="更新Ribbon和Feign" />
     <MESSAGE value="更新Hystrix" />
@@ -661,7 +701,14 @@
     <MESSAGE value="fix(location): 机器学习/吴恩达MachineLearning/week1&#10;&#10;1.公式勘误修正" />
     <MESSAGE value="feat&amp;fix(location): 机器学习/吴恩达MachineLearning/week2&amp;Readme&#10;&#10;1.修改Readme&#10;2.week2更新了一点点" />
     <MESSAGE value="feat(location): 机器学习/吴恩达MachineLearning/week2&#10;&#10;1.week2补充图片等" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(location): 机器学习/吴恩达MachineLearning/week2&#10;&#10;1.week2补充图片等" />
+    <MESSAGE value="fix(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week1语义修正&#10;2.week2勘误修正" />
+    <MESSAGE value="feat(location): 机器学习/吴恩达MachineLearning/week2&#10;&#10;1.week2写到多项式回归" />
+    <MESSAGE value="feat(location): 机器学习/吴恩达MachineLearning/week2 week3&#10;&#10;1.week2增加正规方程&#10;2.week3增加逻辑回归" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(location): 机器学习/吴恩达MachineLearning/week2 week3&#10;&#10;1.week2增加正规方程&#10;2.week3增加逻辑回归" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/SpringBoot.md">
@@ -711,6 +758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/README.md" />
     <entry file="file://$PROJECT_DIR$/开发框架/Spring/重新定义SpringCloud实战/第一章/第一章 微服务与SpringCloud.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="57">
@@ -721,7 +769,6 @@
           </second_editor>
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/linux服务器/linux的定时任务crontab.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
@@ -759,21 +806,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/gradientdescentformultivars2.png" />
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/indicate_multiplefeatures2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/gradientdescentformultivars1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/indicate_multiplefeatures.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/PolynomialRegression_better_model.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/PolynomialRegression_h(θ)smodel.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/PolynomialRegression_h(size).png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/indicate_multiplefeatures2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <first_editor relative-caret-position="528">
+            <caret line="157" selection-start-line="157" selection-end-line="157" />
           </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week3/note.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
