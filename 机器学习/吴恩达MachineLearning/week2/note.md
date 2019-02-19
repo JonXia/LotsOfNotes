@@ -113,6 +113,7 @@
 那么我们最小化这个二次函数的方法是对它求导，令导数=0之后求出的就是令J(θ)最小的θ值。
 
 **推导过程**
+
 ![\theta ={{\left( {X^{T}}X \right)}^{-1}}{X^{T}}y](https://latex.codecogs.com/gif.latex?\theta&space;={{\left(&space;{X^{T}}X&space;\right)}^{-1}}{X^{T}}y) 的推导过程：
 
 ![](https://latex.codecogs.com/gif.latex?J\left(&space;\theta&space;\right)=\frac{1}{2m}\sum\limits_{i=1}^{m}{{{\left(&space;{h_{\theta}}\left(&space;{x^{(i)}}&space;\right)-{y^{(i)}}&space;\right)}^{2}}})
