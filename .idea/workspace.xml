@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="fix(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week1语义修正&#10;2.week2勘误修正">
+    <list default="true" id="bf9039f1-0bc2-4aa5-86f0-6a4ee07c64ea" name="Default" comment="feat(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week3逻辑回归">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week3/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week3/note.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,8 +32,8 @@
         <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week3/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="380">
-                <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <first_editor relative-caret-position="627">
+                <caret line="233" column="76" selection-start-line="233" selection-start-column="76" selection-end-line="233" selection-end-column="76" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -47,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="437">
+              <first_editor relative-caret-position="2204">
                 <caret line="116" column="16" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
               </first_editor>
               <second_editor>
@@ -124,6 +123,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,7 +153,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,7 +275,9 @@
       <workItem from="1550021247626" duration="597000" />
       <workItem from="1550112451283" duration="69000" />
       <workItem from="1550480769243" duration="2236000" />
-      <workItem from="1550538079961" duration="12207000" />
+      <workItem from="1550538079961" duration="12854000" />
+      <workItem from="1550624712957" duration="2722000" />
+      <workItem from="1550710881783" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="增加Springboot，和SpringCloud">
       <created>1546011367749</created>
@@ -586,16 +587,24 @@
       <option name="project" value="LOCAL" />
       <updated>1548840499597</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="feat(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week3逻辑回归">
+      <created>1550566307442</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1550566307442</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146192000" />
+    <option name="totallyTimeSpent" value="150160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14209116" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1575067" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -689,7 +698,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Eureka更新" />
     <MESSAGE value="更新Ribbon和Feign" />
     <MESSAGE value="更新Hystrix" />
     <MESSAGE value="计划总是会变的...+SpringCloud部分改为读书笔记啦" />
@@ -714,7 +722,8 @@
     <MESSAGE value="fix(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week1语义修正&#10;2.week2勘误修正" />
     <MESSAGE value="feat(location): 机器学习/吴恩达MachineLearning/week2&#10;&#10;1.week2写到多项式回归" />
     <MESSAGE value="feat(location): 机器学习/吴恩达MachineLearning/week2 week3&#10;&#10;1.week2增加正规方程&#10;2.week3增加逻辑回归" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(location): 机器学习/吴恩达MachineLearning/week2 week3&#10;&#10;1.week2增加正规方程&#10;2.week3增加逻辑回归" />
+    <MESSAGE value="feat(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week3逻辑回归" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(location): 机器学习/吴恩达MachineLearning&#10;&#10;1.week3逻辑回归" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -835,11 +844,11 @@
     <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/pics/PolynomialRegression_h(size).png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md">
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week3/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="437">
-            <caret line="116" column="16" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
+          <first_editor relative-caret-position="627">
+            <caret line="233" column="76" selection-start-line="233" selection-start-column="76" selection-end-line="233" selection-end-column="76" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -847,11 +856,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week3/note.md">
+    <entry file="file://$PROJECT_DIR$/机器学习/吴恩达MachineLearning/week2/note.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="380">
-            <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <first_editor relative-caret-position="2204">
+            <caret line="116" column="16" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
