@@ -1,6 +1,7 @@
 ## FreeMarker
 
 - 后端代码demo
+```java
       package cn.xsj.demo;
 
       import java.io.File;
@@ -60,9 +61,7 @@
       		out.close();
       	}
       }
-
-
-
+```
 
 1. 指令
    <#assign>用于定义一个变量
