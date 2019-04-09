@@ -1,4 +1,4 @@
-1. 安装anaconda替换原有python2；[点击](https://blog.csdn.net/qq_36527339/article/details/81347353)
+1. 安装anaconda替换原有python2。[点击](https://blog.csdn.net/qq_36527339/article/details/81347353)
 2. 更换Yum源
 ```bash
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak
