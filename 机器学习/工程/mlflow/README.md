@@ -18,6 +18,8 @@
 
   - pyspark：spark提供的python api。网上查资料说用python相较于scala性能较低，具体情况了解不多。
 
+**假如python语言不适合的话，应该是可以不用mlflow，直接用scala调用spark MLLib完成机器学习的模型开发、部署上线，但是python的优势就不能发挥出来了**
+
 进度：
   - 目前在spark分布式环境的模型训练、部署上线、预测等工作没有完成，
   - ~~mlflow ui有些bug~~
