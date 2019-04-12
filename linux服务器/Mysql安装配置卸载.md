@@ -15,7 +15,7 @@ Query OK, 0 rows affected (0.00 sec)
 ```
 然后配置远程登陆的权限
 ```bash
-mysql> grant all privileges on *.* to root@'%'identified by 'password';
+mysql> grant all privileges on *.* to root@'%'identified by 'password' with grant option;
 ```
 设置配置文件
 ```bash
