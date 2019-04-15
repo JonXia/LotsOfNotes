@@ -30,5 +30,22 @@ mlflow pyfunc serve -m /Users/mlflow/mlflow-prototype/mlruns/0/7c1a0d5c42844dcdb
 curl -X POST -H "Content-Type:application/json; format=pandas-split" --data '{"columns":["alcohol", "chlorides", "citric acid", "density", "fixed acidity", "free sulfur dioxide", "pH", "residual sugar", "sulphates", "total sulfur dioxide", "volatile acidity"],"data":[[12.8, 0.029, 0.48, 0.98, 6.2, 29, 3.33, 1.2, 0.39, 75, 0.66]]}' http://127.0.0.1:1234/invocations
 ```
 
+8. 启动cm
+```bash
+sudo systemctl start cloudera-scm-server
+sudo tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
+```
+
 **注意：**
 1. mlflow ui 不能在下载mlflow项目里直接打开，但在/root下，且由mlruns文件夹的地方运行才可以（不知道为什么，github上也有人提同样的issue，但没有解决）
+2. 检查主机正确性时出现 “Cloudera 建议将 /proc/sys/vm/swappiness 设置为 0。当前设置为 30。” 的警告，进行如下设定
+```bash
+# vi /etc/sysctl.conf
+vm.swappiness = 0
+# sysctl –p
+```
+3. 检查主机正确性时出现 “已启用“透明大页面”，它可能会导致重大的性能问题。” 的警告，进行如下设定
+```bash
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+```
