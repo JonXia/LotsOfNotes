@@ -25,9 +25,8 @@
 
 
 进度：
-  - 目前在spark分布式环境的模型训练、部署上线、预测等工作没有完成（安装环境）
-  - ~~mlflow ui有些bug~~
-  - 正在寻找更人性化的模型训练模式(jupyter notebook的方式，但这种方式仅限于训练，正式部署会有性能问题)
+  - 结合pyspark和mlflow跑单机spark代码，接下来放在集群上试一下
+  - 正在寻找更人性化的模型训练模式(pycharm？)
 
 目前环境：
   - centos7+anaconda3-5.2.0(python 3.6.5)
