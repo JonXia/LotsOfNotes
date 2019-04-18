@@ -20,8 +20,12 @@
 
 **假如python语言不适合的话，应该是可以不用mlflow，直接用scala调用spark MLLib完成机器学习的模型开发、部署上线，但是python的优势就不能发挥出来了**
 
+[scala和python的对比](http://www.cnblogs.com/andre-ma/p/8539098.html)
+
+
+
 进度：
-  - 目前在spark分布式环境的模型训练、部署上线、预测等工作没有完成，
+  - 目前在spark分布式环境的模型训练、部署上线、预测等工作没有完成（安装环境）
   - ~~mlflow ui有些bug~~
   - 正在寻找更人性化的模型训练模式(jupyter notebook的方式，但这种方式仅限于训练，正式部署会有性能问题)
 
