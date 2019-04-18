@@ -26,7 +26,7 @@ mlflow ui
 ```bash
 mlflow pyfunc serve -m /Users/mlflow/mlflow-prototype/mlruns/0/7c1a0d5c42844dcdb8f5191146925174/artifacts/model -p 1234
 ```
-启动服务，但是提升不要在生产环境中使用
+启动服务，但是提示不要在生产环境中使用
 
 7. 可以以Restapi的方式调参
 ```bash
@@ -42,17 +42,22 @@ sudo tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
 ```
 
 9. spark-standalone安装
-[配置Python3.5环境](https://blog.csdn.net/qq_40816112/article/details/87262410)
 
-注意，spark
+  [配置Python3.5环境](https://blog.csdn.net/qq_40816112/article/details/87262410)
 
-配置pyspark使用py3
-```bash
-vi ~/.bashrc
-#添加
-export PYSPARK_PYTHON=python3
-source ~/.bashrc
-```
+  ```bash
+   pip freeze #查看安装的包
+   pip uninstall <package>
+   pip install <package>==<version>
+  ```
+
+ 配置pyspark使用py3
+  ```bash
+  vi ~/.bashrc
+  #添加
+  export PYSPARK_PYTHON=python3
+  source ~/.bashrc
+  ```
 
 
 **注意：**
