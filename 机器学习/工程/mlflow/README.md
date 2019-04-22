@@ -25,8 +25,10 @@
 
 
 进度：
-  - 结合pyspark和mlflow跑单机spark代码，接下来放在集群上试一下
-  - 正在寻找更人性化的模型训练模式(pycharm？)
+  - pyspark的demo成功，学习Scala、spark算子等
+  - 正在寻找更人性化的模型训练模式
+    - Scala就是构建Scala项目打包丢在服务器上跑，看输出日志。
+    - python的话，用mlflow ui管理机器学习训练过程，可以通过python脚本跑，也可以通过jupyter notebook远程（不难、待实现）。
 
 目前环境：
   - centos7+anaconda3-5.2.0(python 3.6.5)
