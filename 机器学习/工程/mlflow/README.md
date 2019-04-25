@@ -25,9 +25,9 @@
 
 
 进度：
-  - pyspark的demo成功，学习Scala、spark算子等
+  - 学习Scala、spark算子等
   - 正在寻找更人性化的模型训练模式
-    - Scala就是构建Scala项目打包丢在服务器上跑，看输出日志。
+    - Scala：构建Scala项目打包丢在服务器上跑，看输出日志。
     - python的话，用mlflow ui管理机器学习训练过程，可以通过python脚本跑，也可以通过jupyter notebook远程（不难、待实现）。
 
 目前环境：
