@@ -1,9 +1,17 @@
 Kotlin和Scala语法接近，还好学过Scala，记一些笔记
+
 1.
 一些kotlin基础
 https://blog.csdn.net/lckj686/article/category/7689676
 
 https://blog.csdn.net/weixin_41084236/article/details/83308910#commentBox
+
+https://blog.csdn.net/su19921021/article/details/79244796
+
+tricks
+
+https://blog.csdn.net/sunny2come/article/details/80874066
+
 
 2. ? !!
 ```
@@ -44,9 +52,9 @@ val test = if (5 > 3) {
 ```Kotlin
 /**
  * 计数统计
- */
 fun justCount():() -> Unit{
     var count = 0
+    */
     return {
         println(count++)
     }
@@ -75,3 +83,10 @@ fun main(args: Array<String>) {
     println("${x + y}")
 }(1, 3)
 ```
+5. 函数let,with,run,apply,also
+
+https://blog.csdn.net/u013064109/article/details/78786646
+
+懒加载
+
+https://blog.csdn.net/liyi1009365545/article/details/84236433
