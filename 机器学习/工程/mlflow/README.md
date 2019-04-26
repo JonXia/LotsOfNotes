@@ -25,15 +25,22 @@
 
 
 进度：
-  - 学习Scala、spark算子等
-  - 正在寻找更人性化的模型训练模式
-    - Scala：构建Scala项目打包丢在服务器上跑，看输出日志。
-    - python的话，用mlflow ui管理机器学习训练过程，可以通过python脚本跑，也可以通过jupyter notebook远程（不难、待实现）。
+  - 学习Scala、spark算子等（长期任务，买本书《Spark 大数据集群计算的生产实践》）
+  - 训练模式
+    - Scala：构建Scala项目打包丢在服务器上跑，看输出日志。（迭代太麻烦，已实现）
+    - python的话，用mlflow ui管理机器学习训练过程，可以通过python脚本部署restapi跑，也可以通过jupyter notebook远程（jupyter待实现）。
+  - TODO：spark流式机器学习与规则引擎实现
 
 目前环境：
-  - centos7+anaconda3-5.2.0(python 3.6.5)
-  - mlflow 0.9.0
-
+  - 集群（以spark1.6为主）
+    - jdk7
+    - centos7+anaconda3-5.2.0(python 3.6.5)
+    - mlflow 0.9.0
+    - CDH5.15.2(spark1.6+hadoop2.6.x)
+  - standalone
+    - python3.5
+    - jdk7
+    - spark1.6+
 
 ### 10w条数据的观测结果：
   总的来说，这些特征的离群值较多，0值很多，关键是不能判断出这些异常值是否是正样本（诈骗），[箱型图](https://blog.csdn.net/clairliu/article/details/79217546)的表现不好，大多数特征都不能有一个相对漂亮的箱型图，证明了异常值很多，但是这些应该可以用对数缩放、限制特征值等特征工程方法去解决，但是需要时间去研究。
