@@ -1,7 +1,7 @@
 ### AOF持久化的流程
 aof持久化可以做到尽量接近实时持久化，而且当aof和rdb文件同时存在时有先加载aof
 
-![../pics/s.png](../pics/s.png)
+![../pics/s.png](pics/s.png)
 
     1. 所有的写入命令会追加到aof_buf（缓冲区） 中。
     2. AOF缓冲区根据对应的策略向硬盘做同步操作。
@@ -18,7 +18,7 @@ aof持久化可以做到尽量接近实时持久化，而且当aof和rdb文件�
     2. 硬盘同步
        Redis提供了多种AOF同步策略，由参数appendfsync控制，不同值的含义如图所示：
 
-   ![../pics/aof.png](../pics/aof.png)
+   ![../pics/aof.png](pics/aof.png)
 
    > 系统调用write和fsync说明：
      write操作会触发延迟写（delayed write） 机制。 Linux在内核提供页缓
@@ -86,4 +86,3 @@ aof持久化可以做到尽量接近实时持久化，而且当aof和rdb文件�
     体细节见12.1节“Linux配置优化”。
     4. 降低fork操作的频率， 如适度放宽AOF自动触发时机， 避免不必要
     的全量复制等
-
