@@ -16,3 +16,6 @@
 ## Cypher/CQL，一个蛮有意思的图数据库查询语言
 
 Cypher是一种声明式图数据库查询语言。
+
+## Neo4j知识点
+https://blog.csdn.net/kingjack1176/article/details/75125700
