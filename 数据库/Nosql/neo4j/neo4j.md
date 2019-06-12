@@ -19,3 +19,5 @@ Cypher是一种声明式图数据库查询语言。
 
 ## Neo4j知识点
 https://blog.csdn.net/kingjack1176/article/details/75125700
+
+HA免邮件下载 https://blog.csdn.net/xubo245/article/details/50033003
