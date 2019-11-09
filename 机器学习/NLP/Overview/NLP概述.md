@@ -1,3 +1,5 @@
+[TOC] 
+
 语言模型该怎么计算p(...)
 
 - p(He is studying AI)=p(He)p(is)p(studying)p(AI) ——Unigram
@@ -110,7 +112,7 @@
 
         $logP(s)=\frac {log\sum_{i=1}^{m} P(s_i)} m$
 
-        
+
 
 - Viterb
 
@@ -142,9 +144,9 @@
    $
    \quad = argmac_{c\in candidates} p(s|c) \times p(c)
    $
-   
+
    $p(s|c)$:给定正确的字符串,有多大概率写成了s形式?可以通过数据库统计.
-   
+
    $p(c)$:给定正确的字符串,在词库里出现的概率多高?
 
 #### 停用词
@@ -187,7 +189,7 @@ one-hot encoding:
 
     但是以上根据词频构建的向量，并不能表示出句子中表达重要含义的单词。
 
-- tf-idf：$tfidf(w)=tf(d,w)\times idf(w)$
+- [tf-idf]( http://www.360baidu.cn/seo/tf-idf.html )：$tfidf(w)=tf(d,w)\times idf(w)$
 
     $tf（d,w）$:代表文档$d$中词$w$的词频；
 
@@ -233,5 +235,161 @@ $p(text|source)=p(source|text)p(text)$
 
 #### 语言模型
 
-语言模型：判断语法上是否通顺。
+语言模型：判断语法上是否通顺，计算句子符合语言模型的概率。
 
+##### ChainRule for Language Model
+
+联合概率表达为：$p(A,B)=p(A|B)p(B)=p(B|A)p(A)$ 
+
+$\therefore$要表达句子的联合概率有：
+
+$p(今天,放假,我们,都,休息)=p(今天)p(放假|今天)p(我们|今天放假)p(都|今天放假我们)p(休息|今天放假我们都)$
+
+缺点很大：概率值会很稀疏，依赖语料库，结果没有意义
+
+##### Markov Assumption
+
+$1st\quad order:p(w_1,w_2,w_3,...,w_n)=p(w_1)\prod _{i=2} ^n (w_i|w_{i-1})$ 
+
+$2st\quad order:p(w_1,w_2,w_3,...,w_n)=p(w_1|w_2)\prod _{i=3} ^n (w_i|w_{i-2},w_{i-1})$
+
+$...$
+
+##### [N-gram]( https://blog.csdn.net/han_xiaoyang/article/details/50646667#commentBox )
+
+$Unigram p(w_1,w_2,w_3,...,w_n)=p(w_1)p(w_2)p(w_3)p(w_...)p(w_n)$
+
+$Bigram p(w_1,w_2,w_3,...,w_n)=1st Order$
+
+$N>2$时叫，HigherOrderLM
+
+$Tigram p(w_1,w_2,w_3,...,w_n)=2stOrder$
+
+##### Estimating 
+
+###### Estimating Probability of LM
+
+通过语言模型评估句子，需要平滑项
+
+###### Evaluation of LM
+
+评估模型：perplexity；而且在不同模型里有不同的评估方法，但是通过这种方法，对于再语料库没有出现的词，对句子会有不正确的判断，所以需要平滑项。
+
+##### Smoothing
+
+- add-one smoothing(laplace smoothing)
+
+    $P_{MLE}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)} {c(w_i)}$，极大似然估计，通过词频计算概率
+
+    $P_{Add1}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)+1} {c(w_i)+V}$，$V$：词典的大小，加V确保了$P(w_i|w_{i-1})$总概率=1
+
+- add-k smoothing
+
+    $P_{Addk}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)+k} {c(w_i)+kV}$，$k$：未知数，所以目标变成了设定目标函数优化$k$，使得$k$最小。
+
+- interpolation smoothing
+
+    为了比较公平的比较，需要考虑，N-gram出现的频次。
+
+    $p(w_n|w_{n-1},w_{n-2})=\lambda_1 p(w_n|w_{n-1},w_{n-2})+\lambda_2p(w_n|w_{n-1})+\lambda_3p(w_n)$
+
+    $\lambda_1+\lambda_2+\lambda_3=1$
+
+- goot-turning smoothing
+
+    - 没有出现过的单词
+
+        $P_{MLE}=0$
+
+        $P_{GT}=\frac {N_1} N$，其中$N$代表单词总数，$N_1$代表出现一次的单词。
+
+    - 出现过的单词
+
+        $P_{MLE}=\frac c N$
+
+        $P_{GT}=\frac {(c+1)N_{c+1}} {N_c\times N}$，其中，$c$代表出现的次数，$N_{c+1}$代表出现c+1次的单词。
+
+    这样做解决了未出现在词库的单词带来的最终概率等于0的问题，但是严重依赖下一种($N_{i++1}$)概率。
+
+#### Generating Sentence by LM
+
+可以采用Bigram的方法，从一个词出发考虑能与其相连的概率最大的下个词-》一个句子 
+
+# 两种Learning的方法
+
+## 专家系统
+
+符号主义，涉及到离散数学知识；
+
+**专家系统=推理引擎+知识**
+
+特点：
+
+- 处理不确定性
+
+- 知识的表示
+
+    知识图谱等表示形式
+
+- 可解释性
+
+- 可以做知识推理，通过已有规则生成新规则
+
+缺点：
+
+- 规则数量庞大
+- 需要大量的domain knowledge，和专家指导
+- 迁移学习的能力差
+- 学习能力差
+- 人的思维是有限的
+
+## 基于概率的系统
+
+连接主义
+
+机器学习的分类：监督、无监督
+
+模型的分类：生成模型、判别模型
+
+生成模型：记住特点来生成
+
+判别模型：记住区别来判断
+
+| Supervized Learning |  Unsupervized Learning  
+---|---|---
+ Generative Model     | NaiveBayes | HMM,LDA,GMM 
+Discriminative Model | LR、CRF  |                       
+
+### Naive Bayes
+
+先验概率：总样本中，正样本和负样本的占比。
+
+然后了解所有字样本在各类别中的占比，来考虑新数据的分类。
+
+条件独立：
+
+$p(x,y|z)=p(x|z)\times p(y|z)$
+
+### 评估标准
+
+- 准确率和召回率
+
+    准确率：$p(precision)=\frac {TP} {TP+FP}$
+
+    召回率：$p(recall)=\frac {TP} {TP+FN}$
+
+- F1 
+
+    p和r不直观，所以提出了f1等评估标准3
+
+    $f1-measure=\frac {2\times precision \times recall} {precision+recall}$
+
+## LR
+
+略
+
+**TODO：证明LR是线性分类器？**
+
+目标函数：模型的实例化=定义模型的目标函数+优化算法
+
+简化\hat y表达式，取-log求argmin的w,b，转化成优化算法，这里用Gradient Decent。
