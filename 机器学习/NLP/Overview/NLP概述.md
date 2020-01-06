@@ -407,7 +407,7 @@ $p(x,y|z)=p(x|z)\times p(y|z)$
 - 参数空间选择？
 - 模型拟合过少的样本
 
-[正则化]( https://www.jianshu.com/p/4bad38fe07e6 )：
+[正则化和MLE/MAP]( https://www.jianshu.com/p/4bad38fe07e6 )：
 
 - L0
 
@@ -421,4 +421,39 @@ $p(x,y|z)=p(x|z)\times p(y|z)$
 
     l1和l2可以一起使用=>ElasticNet
 
-验证：
+参数搜索策略：
+
+- 随即搜索：
+- 遗传算法：
+- 贝叶斯优化：
+
+MLE/MAP：
+
+样本量多的时候，map->mlez
+
+### Lasso 
+
+加入了L1，变成了Lasso/岭回归。有了稀疏性，所以拥有了特征选择的效果。
+
+为什么更期望稀疏
+
+- 特征维度太高，计算量也变得高
+- 在稀疏性条件下，计算量只依赖非0项的个数
+- 提高可解释性
+
+特征选择技术：
+
+- 对特征进行Exhaustive search，从多种特征组合，时间复杂度高。
+
+- Greedy Approaches
+
+    - Forward
+    - Backward
+
+- Lasso，正则的方法选择特征
+
+    加入L1,L2正则项
+
+    - Coordinate Descent
+
+        

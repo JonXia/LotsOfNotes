@@ -1,3 +1,5 @@
+[TOC] 
+
 # Symbol stipulations
 
 $(x,y)$ represented a single training example, $x \in \mathbb{R} ^ {n_x}, y \in { \{0,1\} }$;
