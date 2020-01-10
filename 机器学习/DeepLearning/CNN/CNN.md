@@ -97,6 +97,85 @@ $其中N是图像宽度，P是padding圈数，F是fillter宽度，S是步长。$
 
 [为什么需要非线性激活函数]( http://www.ai-start.com/dl2017/html/lesson1-week3.html#header-n152 )， 因为这两个线性函数的组合本身就是线性函数，所以除非你引入非线性，否则你无法计算更有用的函数，即使你的网络层数再多也不行； 除非回归问题，可以在输出层用线性激活函数。总之，不能在隐藏层使用线性激活函数。
 
+- Sigmoid
+
+    - 输入非常大或者非常小的时候梯度消失
+
+        ![image-20200110135701771](pics/image-20200110135701771.png)
+
+    - 输出均值不为0
+
+        非0对于dl来说是不友好的，网络的学习和初始化都和均值为0有关系。
+
+    - 指数运算复杂
+
+    - 梯度消失
+
+- tanh
+
+    - 依旧有梯度消失问题
+
+        ![image-20200110141254693](pics/image-20200110141254693.png)
+
+    - 运算依旧复杂（比sigmoid快）
+
+    - 均值为0——优点
+
+- ReLU (Rectified Linear Unit)
+
+    - 梯度不会消失
+    - 计算量小，收敛速度快
+
+    缺点：
+
+    - 输出均值非0
+
+    - Dead ReLU
+
+        死的神经单元不会激活。TODO：查找论文
+
+- Leaky ReLU/PRelu
+
+    <img src="pics/CFC5A1C95A84A6D8CF3FFC1DD30597782AEEAE57_size20_w740_h231-1578637812388.jpeg" alt="img" style="zoom:50%;" />
+
+    $a_i$是$(1,+\infty)$的随机数。
+
+    - 解决dead ReLU问题
+    - PReLU的$a_{i}$是随着数据变化的。TODO：查找论文
+
+- RReLU
+
+    <img src="pics/B3F2F3EA627EBB55D88C8F8FB36942C56B350A4B_size14_w740_h221.jpeg" alt="img" style="zoom:50%;" />
+
+    一图流，自己看公式。TODO：查找论文
+
+- ELU
+    $$
+    ELU:f(x)=\left\{\begin{matrix}
+    x\qquad\qquad\qquad\quad if \quad x\geqslant0\\  
+    \alpha(exp(x)-1)\qquad if \quad x\leqslant0
+    \end{matrix}\right.
+    $$
+    ![image-20200110151608270](pics/image-20200110151608270.png)
+
+    - 小于0的时候因为有指数函数exp运算，所以运算量还是较大
+
+- 几种ReLU的比较
+
+    ![img](pics/C56E5C6FCBB36E70BA5EBC90CBD142BA320B3DF6_size19_w740_h217.jpeg)
+
+- maxout
+
+    $max(w_1^Tx+b_1,w_2^Tx+b_2)$
+
+    - ReLU的泛化，继承了各种ReLU的特点
+
+    - 没有dead ReLU
+
+    缺点：
+
+    - 参数x2了
+
 #### Summary
 
 ##### 公式：卷积核的参数

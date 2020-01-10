@@ -1,4 +1,4 @@
-# 优化算法 
+# fine tuning
 
 参考: https://blog.csdn.net/cuicheng01/article/details/83305854 
 
@@ -9,7 +9,7 @@
 - 数据增强
 - ...
 
-## 更多优化算法
+## 优化算法
 
 参考：https://www.cnblogs.com/ying-chease/p/9152427.html
 
@@ -46,7 +46,13 @@ https://www.zhihu.com/people/junezth/posts
 
     - 学习率衰减
 
+        exponential decay：$\alpha=\alpha_{t-1}e^{-kt}$
+
+        1/t decay：$\alpha_t=\alpha_{t-1}/(1+kt)$
+
     - 学习率预热
+
+        
 
     - 算法
 
@@ -62,7 +68,7 @@ https://www.zhihu.com/people/junezth/posts
             $$
             \eta_t=\frac {\alpha} {\sqrt {G_t+\epsilon}}\cdot g_t
             $$
-            可以看出，现在的学习率$\alpha$实质上是$\frac {\alpha} {\sqrt {G_t+\epsilon}}$，学习率由偏导数$g_t$的累计和控制：在偏导数累积变大的时候，学习率$\alpha$变小，相反，偏导数较小则较大。但是，**整体学习率逐渐缩小**。****
+            可以看出，现在的学习率$\alpha$实质上是$\frac {\alpha} {\sqrt {G_t+\epsilon}}$，学习率由偏导数$g_t$的累计和控制：在偏导数累积变大的时候，学习率$\alpha$变小，相反，偏导数较小则较大。但是，**整体学习率逐渐缩小**。
 
         - RMSprop
 
@@ -137,10 +143,6 @@ https://www.zhihu.com/people/junezth/posts
         $$
         $\alpha$通常为0.001，并且也可以进行衰减，比如$\alpha_t=\frac {\alpha_0} {\sqrt t}$。
     
-        exponential decay：$\alpha=\alpha_{t-1}e^{-kt}$
-    
-        1/t decay：$\alpha_t=\alpha_{t-1}/(1+kt)$
-    
     - Nadam
     
         把计算梯度的方法换成：
@@ -179,4 +181,11 @@ https://www.zhihu.com/people/junezth/posts
                 于是他们提出了一个用来改进Adam的方法：前期用Adam，享受Adam快速收敛的优势；后期切换到SGD，慢慢寻找最优解。这一方法以前也被研究者们用到，不过主要是根据经验来选择切换的时机和切换后的学习率。这篇文章把这一切换过程傻瓜化，给出了切换SGD的时机选择方法，以及学习率的计算方法，效果看起来也不错。
         
             但是怎么怼，**数据和经验才是根本。**
+
+### 使用策略
+
+- 对于稀疏数据，使用学习率自适应方法。
+- SGD通常训练时间更长，最终效果更好，但需要好的初始化和learning rate。
+- 训练更深更复杂的网络且需要快速收敛时，推荐使用adam，并设置比较小的learning rate。
+- AdaGrad、RMSprop、Adam是比较相似的算法，效果差不多。
 
