@@ -64,7 +64,7 @@
 
 - 清洗：包括无用的标签、特殊符号、数字、停用词(对理解产生不了影响的词)
 - 标准化：英文用的多，分为Stemming、Lemmazation
-- 特征提取：tf-idf、word2ve
+- 特征提取：tf-idf、word2ec
 - 建模：。。。
 
 ### 分词
@@ -87,7 +87,7 @@
 
     步骤与前向最大匹配相反
 
-缺点：
+缺点：x
 
 - 贪心算法只能找到局部最优
 
@@ -185,7 +185,7 @@ one-hot encoding:
 
     缺点：没有考虑方向
 
-- 余弦相似度：$d（\boldsymbol s_1,\boldsymbol s_2）=\boldsymbol  s_1 · \boldsymbol  s_2/(|\boldsymbol  s_1|\times|\boldsymbol  s_2|)$，$内积/范数$
+- 余弦相似度：$d（\boldsymbol s_1,\boldsymbol s_2）=\boldsymbol  s_1 · \boldsymbol  s_2/(|\boldsymbol  s_1|\times|\boldsymbol  s_2|)$，$（内积/范数）$
 
     但是以上根据词频构建的向量，并不能表示出句子中表达重要含义的单词。
 
@@ -205,7 +205,7 @@ one-hot encoding:
 
 ##### 分布式的表示方法介绍：
 
-word2vec！
+word2vec
 
 特点：向量大小自定义，稀疏性弱；
 
@@ -245,7 +245,9 @@ $\therefore$要表达句子的联合概率有：
 
 $p(今天,放假,我们,都,休息)=p(今天)p(放假|今天)p(我们|今天放假)p(都|今天放假我们)p(休息|今天放假我们都)$
 
-缺点很大：概率值会很稀疏，依赖语料库，结果没有意义
+##### 缺点：
+
+参数空间过大，概率值会很稀疏，依赖语料库，结果没有语言意义
 
 ##### Markov Assumption
 
@@ -257,13 +259,13 @@ $...$
 
 ##### [N-gram]( https://blog.csdn.net/han_xiaoyang/article/details/50646667#commentBox )
 
-$Unigram p(w_1,w_2,w_3,...,w_n)=p(w_1)p(w_2)p(w_3)p(w_...)p(w_n)$
+$Unigram=   p(w_1,w_2,w_3,...,w_n)=p(w_1)p(w_2)p(w_3)p(w_...)p(w_n)$
 
-$Bigram p(w_1,w_2,w_3,...,w_n)=1st Order$
+$Bigram= p(w_1,w_2,w_3,...,w_n)=1st Order$
 
 $N>2$时叫，HigherOrderLM
 
-$Tigram p(w_1,w_2,w_3,...,w_n)=2stOrder$
+$Trigram= p(w_1,w_2,w_3,...,w_n)=2stOrder$
 
 ##### Estimating 
 
@@ -293,7 +295,7 @@ $Tigram p(w_1,w_2,w_3,...,w_n)=2stOrder$
 
     $p(w_n|w_{n-1},w_{n-2})=\lambda_1 p(w_n|w_{n-1},w_{n-2})+\lambda_2p(w_n|w_{n-1})+\lambda_3p(w_n)$
 
-    $\lambda_1+\lambda_2+\lambda_3=1$
+    $\lambda_1+\lambda_2+\lambda_3=1$ 。
 
 - goot-turning smoothing
 
