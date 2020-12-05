@@ -2,3 +2,6 @@
 .ignore
 /机器学习\NLP\datasource-master
 /机器学习\d2l-pytorch\input
+*.csv
+*.txt
+*.bin
