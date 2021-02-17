@@ -58,6 +58,23 @@
 
 - Phonetics（声音）
 
+## 简介NLP的基础任务
+
+- ### 分词
+
+- ### 词性标注
+
+  - 句子中的每个单词被分类成一种词性
+  - 词性标注的过程依赖当前单词以及它的上下文信息
+  - 词性标注问题也被叫做序列标注问题
+  - 很多时候可以作为上游任务的特征
+
+- ### NER
+
+- ### 句法分析(Syntatic Analysis)
+
+- ### 语义分析(Semantic Analysis)
+
 ## 文本处理的流程
 
 **原始文本$\rightarrow$分词$\rightarrow$清洗$\rightarrow$标准化$\rightarrow$特征提取$\rightarrow$建模**
@@ -118,113 +135,6 @@
 
     将上述步骤合并，减少时间复杂度，回头整理
 
-#### 拼写纠错 Spell Correction
-
-算法:
-
-- 编辑距离
-
-    通常有三个操作，addcc,delete,replace，看候选单词三个操作的操作成本，成本越小词越相似。通过词频、上下文关联等标准过滤返回可能的纠错单词。（DP算法）
-
-    上述方法**时间复杂度高:O(n)**
-
-    可以更改为：用户输入单词$\rightarrow$生成编辑距离为1,2的字符串$\rightarrow$过滤$\rightarrow$返回
-
-- 过滤
-
-    概念：给定一个字符串s，我们要找出最有可能成为正确的字符串c，也就是
-
-    $
-    \hat c = argmac_{c\in candidates}p(c|s)
-   $
-   $
-   \quad = argmac_{c\in candidates}\frac {p(s|c) \times p(c)}  {p(s)}
-   $
-   因为$p(s)$可以看作为常数，有：
-   $
-   \quad = argmac_{c\in candidates} p(s|c) \times p(c)
-   $
-
-   $p(s|c)$:给定正确的字符串,有多大概率写成了s形式?可以通过数据库统计.
-
-   $p(c)$:给定正确的字符串,在词库里出现的概率多高?
-
-#### 停用词
-
-将停用词,出现频率较低的词过滤掉.但也要考虑应用场景,比如情感分析,有些词就不必过滤.
-
-#### 标准化
-
-通常用在英文场景中。
-
-- stemming
-
-- lemonazation
-
-#### 单词/句子的表示
-
-one-hot encoding:
-
-首先要有词典，类似于这样:
-
-```python
-['an', 'apple', 'many']
-```
-
-比如 this's a apple.有，这个形式也可以看作**向量**:
-
-```python
-(0,1,0)
-```
-
-独热编码在文本处理上属于：Bag of words 词袋模型。
-
-#### 文本相似度
-
-- 欧氏距离：$d(\boldsymbol s_1,\boldsymbol s_2)=|\boldsymbol s_1-\boldsymbol s_2|$
-
-    缺点：没有考虑方向
-
-- 余弦相似度：$d（\boldsymbol s_1,\boldsymbol s_2）=\boldsymbol  s_1 · \boldsymbol  s_2/(|\boldsymbol  s_1|\times|\boldsymbol  s_2|)$，$（内积/范数）$
-
-    但是以上根据词频构建的向量，并不能表示出句子中表达重要含义的单词。
-
-- [tf-idf]( http://www.360baidu.cn/seo/tf-idf.html )：$tfidf(w)=tf(d,w)\times idf(w)$
-
-    $tf（d,w）$:代表文档$d$中词$w$的词频；
-
-    $idf(w)=log\frac N {N(w+1)}$：$N$：文档总数，$N(w)$：词w出现在多少个文档
-
-#### 词向量
-
-通过上述方法，我们可以发现，
-
-- 利用字典+词频做One-hot的方法是属于一种词袋模型，假设词与词之间相互独立，也不考虑词语词之间的顺序，这是不符合文本常识的；
-
-- 而且随则词典增多，向量大小会无限扩展，其中很多0，单词的向量会离散、稀疏。
-
-##### 分布式的表示方法介绍：
-
-word2vec
-
-特点：向量大小自定义，稀疏性弱；
-
-理论上分布式表达方法可以表达$+\infty$个单词；
-
-##### 训练词向量：
-
-1. 指定维度：
-
-2. 输入:字符串，包括1Billon单词这种规模
-
-3. 训练：skip-gram、glove、cbow、rnn/lstm、matrix factiorization...
-
-4. 判断相关性：通过上述、欧氏距离、余弦相似度、lstm/rnn等
-
-#### 倒排表
-
-搜索用
-
 ### 语言模型
 
 #### Noisy Channel Model
@@ -267,9 +177,7 @@ $N>2$时叫，HigherOrderLM
 
 $Trigram= p(w_1,w_2,w_3,...,w_n)=2stOrder$
 
-##### Estimating 
-
-###### Estimating Probability of LM
+##### 评估语言模型，Estimating
 
 通过语言模型评估句子，需要平滑项
 
@@ -277,45 +185,174 @@ $Trigram= p(w_1,w_2,w_3,...,w_n)=2stOrder$
 
 评估模型：perplexity；而且在不同模型里有不同的评估方法，但是通过这种方法，对于再语料库没有出现的词，对句子会有不正确的判断，所以需要平滑项。
 
-##### Smoothing
+##### Perplexity
+
+Perplexity=2^-(x) x:average log likelihood
+
+![image-20210217210537286](pics/image-20210217210537286.png)
+
+Perplexity越小，说明语言模型越好。
+
+##### 平滑方法，Smoothing
 
 - add-one smoothing(laplace smoothing)
 
-    $P_{MLE}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)} {c(w_i)}$，极大似然估计，通过词频计算概率
+  朴素贝叶斯也是用ls平滑的
 
-    $P_{Add1}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)+1} {c(w_i)+V}$，$V$：词典的大小，加V确保了$P(w_i|w_{i-1})$总概率=1
+  $P_{MLE}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)} {c(w_{i-1})}$，极大似然估计，通过词频计算概率，c代表语料库中某情况出现的
+
+  $P_{Add1}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)+1} {c(w_{i-1})+V}$，$V$：词典的大小，加V确保了$P(w_i|w_{i-1})$总概率=1，也是归一化
 
 - add-k smoothing
 
-    $P_{Addk}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)+k} {c(w_i)+kV}$，$k$：未知数，所以目标变成了设定目标函数优化$k$，使得$k$最小。
+  $P_{Addk}(w_i|w_{i-1})=\frac {c(w_{i-1},w_i)+k} {c(w_i)+kV}$，$k$：未知数，所以目标变成了设定目标函数优化$k$，使得$k$最小。
 
 - interpolation smoothing
 
-    为了比较公平的比较，需要考虑，N-gram出现的频次。
+  为了比较公平的比较，需要考虑，N-gram出现的频次。
 
-    $p(w_n|w_{n-1},w_{n-2})=\lambda_1 p(w_n|w_{n-1},w_{n-2})+\lambda_2p(w_n|w_{n-1})+\lambda_3p(w_n)$
+  $p(w_n|w_{n-1},w_{n-2})=\lambda_1 p(w_n|w_{n-1},w_{n-2})+\lambda_2p(w_n|w_{n-1})+\lambda_3p(w_n)$
 
-    $\lambda_1+\lambda_2+\lambda_3=1$ 。
+  $\lambda_1+\lambda_2+\lambda_3=1$ 。
 
 - goot-turning smoothing
 
-    - 没有出现过的单词
+  - 没有出现过的单词
 
-        $P_{MLE}=0$
+    $P_{MLE}=0$
 
-        $P_{GT}=\frac {N_1} N$，其中$N$代表单词总数，$N_1$代表出现一次的单词。
+    $P_{GT}=\frac {N_1} N$，其中$N$代表单词总数，$N_1$代表出现一次的单词。
 
-    - 出现过的单词
+  - 出现过的单词
 
-        $P_{MLE}=\frac c N$
+    $P_{MLE}=\frac c N$
 
-        $P_{GT}=\frac {(c+1)N_{c+1}} {N_c\times N}$，其中，$c$代表出现的次数，$N_{c+1}$代表出现c+1次的单词。
+    $P_{GT}=\frac {(c+1)N_{c+1}} {N_c\times N}$，其中，$c$代表出现的次数，$N_{c+1}$代表出现c+1次的单词。
 
-    这样做解决了未出现在词库的单词带来的最终概率等于0的问题，但是严重依赖下一种($N_{i++1}$)概率。
+  这样做解决了未出现在词库的单词带来的最终概率等于0的问题，但是严重依赖下一种($N_{i++1}$)概率。
 
 #### Generating Sentence by LM
 
 可以采用Bigram的方法，从一个词出发考虑能与其相连的概率最大的下个词-》一个句子 
+
+#### 语言模型在拼写纠错的应用，Spell Correction
+
+算法:
+
+- 编辑距离
+
+    通常有三个操作，add,delete,replace，看候选单词三个操作的操作成本，成本越小词越相似。通过词频、上下文关联等标准过滤返回可能的纠错单词。（DP算法）
+
+    上述方法**时间复杂度高:O(n)**
+
+    可以更改为：用户输入单词$\rightarrow$生成编辑距离为1,2的字符串$\rightarrow$过滤$\rightarrow$返回
+
+- 过滤
+
+    概念：给定一个字符串s，我们要找出最有可能成为正确的字符串c，也就是
+
+    $
+    \hat c = argmac_{c\in candidates}p(c|s)
+   $
+   $
+   \quad = argmac_{c\in candidates}\frac {p(s|c) \times p(c)}  {p(s)}
+   $
+   因为$p(s)$可以看作为常数，有：
+   $
+   \quad = argmac_{c\in candidates} p(s|c) \times p(c)
+   $
+
+   $p(s|c)$:给定正确的字符串,有多大概率写成了s形式?可以通过数据库统计.
+
+   $p(c)$:给定正确的字符串,在词库里出现的概率多高?
+
+#### 停用词
+
+将停用词,出现频率较低的词过滤掉.但也要考虑应用场景,比如情感分析,有些词就不必过滤.
+
+#### 标准化
+
+通常用在英文场景中。
+
+- stemming
+
+- lemonazation
+
+### 文本表示的方法
+
+- one-hot encoding:
+
+首先要有词表，类似于这样:
+
+```python
+['an', 'apple', 'many']
+```
+
+比如 this's a apple.有，这个形式也可以看作**向量**:
+
+```python
+(0,1,0)
+```
+
+独热编码在文本处理上属于：Bag of words 词袋模型。
+
+- [tf-idf]( http://www.360baidu.cn/seo/tf-idf.html )：$tfidf(w)=tf(d,w)\times idf(w)$
+
+  $词频：tf（d,w）$:代表文档$d$中词$w$的词频；
+
+  $逆文档频率：idf(w)=log\frac N {N(w+1)}$：$N$：文档总数，$N(w)$：词w出现在多少个文档
+
+#### 文本相似度
+
+- 欧氏距离：$d(\boldsymbol s_1,\boldsymbol s_2)=|\boldsymbol s_1-\boldsymbol s_2|$
+
+    缺点：没有考虑方向
+
+- 余弦相似度：$d（\boldsymbol s_1,\boldsymbol s_2）=\boldsymbol  s_1 · \boldsymbol  s_2/(|\boldsymbol  s_1|\times|\boldsymbol  s_2|)$，$（内积/范数）$
+
+    但是以上根据词频构建的向量，并不能表示出句子中表达重要含义的单词。
+
+#### 主题模型
+
+LSA(SVD)，pLSA，LDA
+
+词与文档之间还有一层隐含关系，我们称之为topic。
+
+LSA(SVD)：降维，词到主题的矩阵，中间对角线矩阵，主题到文档的矩阵。
+
+把文档中的噪音去除掉
+
+#### 词向量
+
+通过上述方法，我们可以发现，
+
+- 利用字典+词频做One-hot的方法是属于一种词袋模型，假设词与词之间相互独立，也不考虑词语词之间的顺序，这是不符合文本常识的，比如词和词语义相近，但是不是同一个词的时候，即所谓的语义鸿沟。
+
+- 而且随则词典增多，向量大小会无限扩展，其中很多0，单词的向量会离散、稀疏，产生所谓维度爆炸的现象。
+
+##### 分布式的表示方法介绍：
+
+word2vec(2013)
+
+特点：向量大小自定义，稀疏性弱；
+
+理论上分布式表达方法可以表达$+\infty$个单词；
+
+##### 训练词向量：
+
+1. 指定维度：
+
+2. 输入:字符串，包括1Billon单词这种规模
+
+3. 训练：skip-gram、glove、cbow、rnn/lstm、matrix factiorization...
+
+4. 判断相关性：通过上述、欧氏距离、余弦相似度、lstm/rnn等
+
+#### 倒排表
+
+搜索用
+
+
 
 # 两种Learning的方法
 
