@@ -7,3 +7,7 @@
   > pip freeze > requirements.txt
   >
   > conda list -e > requirements.txt
+
+- 创建环境
+
+  > conda create -n py39 python=3.9
