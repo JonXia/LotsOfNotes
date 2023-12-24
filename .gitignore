@@ -5,3 +5,7 @@
 *.csv
 *.txt
 *.bin
+.vs
+.vscode
+x64
+x86
