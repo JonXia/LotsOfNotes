@@ -2,6 +2,7 @@
 #ifndef __TEST_H__
 #define __TEST_H__
 //////////////////////////////////////////////////////////////////////////
+#pragma once
 // template function
 template<class T>
 T func(T, T B = T(0));

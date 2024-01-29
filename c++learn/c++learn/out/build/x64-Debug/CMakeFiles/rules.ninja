@@ -71,6 +71,24 @@ rule CXX_STATIC_LIBRARY_LINKER__LearnFunc_Debug
 
 
 #############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__LearnPoint_Debug
+  deps = msvc
+  command = D:\mysoftware\vscode2019\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__LearnPoint_Debug
+  command = cmd.exe /C "$PRE_LINK && D:\mysoftware\vscode2019\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in  && $POST_BUILD"
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE

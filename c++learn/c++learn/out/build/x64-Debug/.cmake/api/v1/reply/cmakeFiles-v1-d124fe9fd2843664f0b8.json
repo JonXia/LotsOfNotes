@@ -127,6 +127,9 @@
 		},
 		{
 			"path" : "template/CMakeLists.txt"
+		},
+		{
+			"path" : "point/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

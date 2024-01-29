@@ -41,7 +41,7 @@ include CMakeFiles\rules.ninja
 #############################################
 # Order-only phony target for c++learn_2
 
-build cmake_object_order_depends_target_c++learn_2: phony || cmake_object_order_depends_target_LearnFunc
+build cmake_object_order_depends_target_c++learn_2: phony || cmake_object_order_depends_target_LearnFunc cmake_object_order_depends_target_LearnPoint
 
 build CMakeFiles\c++learn_2.dir\main.cpp.obj: CXX_COMPILER__c.2b.2blearn_2_Debug ..\..\..\main.cpp || cmake_object_order_depends_target_c++learn_2
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
@@ -50,31 +50,10 @@ build CMakeFiles\c++learn_2.dir\main.cpp.obj: CXX_COMPILER__c.2b.2blearn_2_Debug
   TARGET_COMPILE_PDB = CMakeFiles\c++learn_2.dir\
   TARGET_PDB = c++learn_2.pdb
 
-build CMakeFiles\c++learn_2.dir\template_(2)\template.cpp.obj: CXX_COMPILER__c.2b.2blearn_2_Debug ..\..\..\template$ (2)\template.cpp || cmake_object_order_depends_target_c++learn_2
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  OBJECT_DIR = CMakeFiles\c++learn_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\c++learn_2.dir\template_(2)
-  TARGET_COMPILE_PDB = CMakeFiles\c++learn_2.dir\
-  TARGET_PDB = c++learn_2.pdb
-
-build CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c.obj: C_COMPILER__c.2b.2blearn_2_Debug ..\..\..\template$ (2)\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c || cmake_object_order_depends_target_c++learn_2
+build CMakeFiles\c++learn_2.dir\multi-thread\mt.c.obj: C_COMPILER__c.2b.2blearn_2_Debug ..\..\..\multi-thread\mt.c || cmake_object_order_depends_target_c++learn_2
   FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
   OBJECT_DIR = CMakeFiles\c++learn_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC
-  TARGET_COMPILE_PDB = CMakeFiles\c++learn_2.dir\
-  TARGET_PDB = c++learn_2.pdb
-
-build CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp.obj: CXX_COMPILER__c.2b.2blearn_2_Debug ..\..\..\template$ (2)\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp || cmake_object_order_depends_target_c++learn_2
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  OBJECT_DIR = CMakeFiles\c++learn_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX
-  TARGET_COMPILE_PDB = CMakeFiles\c++learn_2.dir\
-  TARGET_PDB = c++learn_2.pdb
-
-build CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c.obj: C_COMPILER__c.2b.2blearn_2_Debug ..\..\..\template$ (2)\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c || cmake_object_order_depends_target_c++learn_2
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1
-  OBJECT_DIR = CMakeFiles\c++learn_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\ShowIncludes
+  OBJECT_FILE_DIR = CMakeFiles\c++learn_2.dir\multi-thread
   TARGET_COMPILE_PDB = CMakeFiles\c++learn_2.dir\
   TARGET_PDB = c++learn_2.pdb
 
@@ -86,10 +65,10 @@ build CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\Show
 #############################################
 # Link the executable c++learn_2.exe
 
-build c++learn_2.exe: CXX_EXECUTABLE_LINKER__c.2b.2blearn_2_Debug CMakeFiles\c++learn_2.dir\main.cpp.obj CMakeFiles\c++learn_2.dir\template_(2)\template.cpp.obj CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c.obj CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp.obj CMakeFiles\c++learn_2.dir\template_(2)\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c.obj | template\LearnFunc.lib || template\LearnFunc.lib
+build c++learn_2.exe: CXX_EXECUTABLE_LINKER__c.2b.2blearn_2_Debug CMakeFiles\c++learn_2.dir\main.cpp.obj CMakeFiles\c++learn_2.dir\multi-thread\mt.c.obj | template\LearnFunc.lib point\LearnPoint.lib || point\LearnPoint.lib template\LearnFunc.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = template\LearnFunc.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = template\LearnFunc.lib  point\LearnPoint.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\c++learn_2.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -184,11 +163,77 @@ build template\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 build template\rebuild_cache: phony template\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/gitWorkspace/LotsOfNotes/c++learn/c++learn/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target LearnPoint
+
+
+#############################################
+# Order-only phony target for LearnPoint
+
+build cmake_object_order_depends_target_LearnPoint: phony || point\CMakeFiles\LearnPoint.dir
+
+build point\CMakeFiles\LearnPoint.dir\point.cpp.obj: CXX_COMPILER__LearnPoint_Debug ..\..\..\point\point.cpp || cmake_object_order_depends_target_LearnPoint
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = point\CMakeFiles\LearnPoint.dir
+  OBJECT_FILE_DIR = point\CMakeFiles\LearnPoint.dir
+  TARGET_COMPILE_PDB = point\CMakeFiles\LearnPoint.dir\LearnPoint.pdb
+  TARGET_PDB = point\LearnPoint.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target LearnPoint
+
+
+#############################################
+# Link the static library point\LearnPoint.lib
+
+build point\LearnPoint.lib: CXX_STATIC_LIBRARY_LINKER__LearnPoint_Debug point\CMakeFiles\LearnPoint.dir\point.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = point\CMakeFiles\LearnPoint.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = point\CMakeFiles\LearnPoint.dir\LearnPoint.pdb
+  TARGET_FILE = point\LearnPoint.lib
+  TARGET_PDB = point\LearnPoint.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build point\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D D:\gitWorkspace\LotsOfNotes\c++learn\c++learn\out\build\x64-Debug\point && D:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build point\edit_cache: phony point\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build point\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D D:\gitWorkspace\LotsOfNotes\c++learn\c++learn\out\build\x64-Debug\point && D:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\gitWorkspace\LotsOfNotes\c++learn\c++learn -BD:\gitWorkspace\LotsOfNotes\c++learn\c++learn\out\build\x64-Debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build point\rebuild_cache: phony point\CMakeFiles\rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build LearnFunc: phony template\LearnFunc.lib
 
 build LearnFunc.lib: phony template\LearnFunc.lib
+
+build LearnPoint: phony point\LearnPoint.lib
+
+build LearnPoint.lib: phony point\LearnPoint.lib
 
 build c++learn_2: phony c++learn_2.exe
 
@@ -200,7 +245,14 @@ build c++learn_2: phony c++learn_2.exe
 #############################################
 # Folder: D:/gitWorkspace/LotsOfNotes/c++learn/c++learn/out/build/x64-Debug
 
-build all: phony c++learn_2.exe template\all
+build all: phony c++learn_2.exe template\all point\all
+
+# =============================================================================
+
+#############################################
+# Folder: D:/gitWorkspace/LotsOfNotes/c++learn/c++learn/out/build/x64-Debug/point
+
+build point\all: phony point\LearnPoint.lib
 
 # =============================================================================
 
@@ -216,14 +268,14 @@ build template\all: phony template\LearnFunc.lib
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\template\CMakeLists.txt CMakeCache.txt CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\point\CMakeLists.txt ..\..\..\template\CMakeLists.txt CMakeCache.txt CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\..\..\CMakeLists.txt ..\..\..\template\CMakeLists.txt CMakeCache.txt CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake: phony
+build ..\..\..\CMakeLists.txt ..\..\..\point\CMakeLists.txt ..\..\..\template\CMakeLists.txt CMakeCache.txt CMakeFiles\3.20.21032501-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.20.21032501-MSVC_2\CMakeSystem.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake D$:\mysoftware\vscode2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake: phony
 
 
 #############################################

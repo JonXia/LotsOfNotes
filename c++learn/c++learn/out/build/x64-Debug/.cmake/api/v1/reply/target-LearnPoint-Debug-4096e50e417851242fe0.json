@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "template/LearnFunc.lib"
+			"path" : "point/LearnPoint.lib"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 		],
 		"files" : 
 		[
-			"template/CMakeLists.txt"
+			"point/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -34,7 +34,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 10,
+				"line" : 9,
 				"parent" : 0
 			}
 		]
@@ -55,13 +55,13 @@
 			]
 		}
 	],
-	"id" : "LearnFunc::@819783a551a942c93948",
-	"name" : "LearnFunc",
-	"nameOnDisk" : "LearnFunc.lib",
+	"id" : "LearnPoint::@3589f16a8dd2dd1a351f",
+	"name" : "LearnPoint",
+	"nameOnDisk" : "LearnPoint.lib",
 	"paths" : 
 	{
-		"build" : "template",
-		"source" : "template"
+		"build" : "point",
+		"source" : "point"
 	},
 	"sourceGroups" : 
 	[
@@ -78,7 +78,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "template/template.cpp",
+			"path" : "point/point.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

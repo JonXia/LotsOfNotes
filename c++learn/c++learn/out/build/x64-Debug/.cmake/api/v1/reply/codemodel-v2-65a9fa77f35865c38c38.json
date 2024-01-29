@@ -8,7 +8,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"minimumCMakeVersion" : 
 					{
@@ -18,7 +19,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				},
 				{
@@ -34,6 +35,20 @@
 					[
 						0
 					]
+				},
+				{
+					"build" : "point",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "point",
+					"targetIndexes" : 
+					[
+						1
+					]
 				}
 			],
 			"name" : "Debug",
@@ -43,13 +58,15 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"name" : "c++learn",
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -58,14 +75,21 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "LearnFunc::@819783a551a942c93948",
-					"jsonFile" : "target-LearnFunc-Debug-5de766bd3e01dab46541.json",
+					"jsonFile" : "target-LearnFunc-Debug-f98def5166c58a8291a0.json",
 					"name" : "LearnFunc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "LearnPoint::@3589f16a8dd2dd1a351f",
+					"jsonFile" : "target-LearnPoint-Debug-4096e50e417851242fe0.json",
+					"name" : "LearnPoint",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "c++learn_2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-c++learn_2-Debug-8ddc3bc32e4c6142a03e.json",
+					"jsonFile" : "target-c++learn_2-Debug-1cb72abb52098d108645.json",
 					"name" : "c++learn_2",
 					"projectIndex" : 0
 				}
