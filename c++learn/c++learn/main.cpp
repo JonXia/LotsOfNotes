@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 	//cout << func(10) << endl;
 	//cout << func(10, 1) << endl;
 	//cout << func(10.) << endl;
-	//cout << func(10., 1.) << endl;
+	cout << func(10., 1.) << endl;
 
 	// test template class
 	Test<int> a(13);
